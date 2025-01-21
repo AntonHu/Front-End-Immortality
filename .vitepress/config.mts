@@ -40,4 +40,5 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: "docs",
   lastUpdated: true,
+  base: "/Front-End-Immortality",
 });
