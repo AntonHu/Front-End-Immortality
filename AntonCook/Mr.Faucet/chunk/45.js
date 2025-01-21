@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[45],{"112":function(n,t,o){"use strict";o.r(t),o.d(t,"taro_picker_view_core",(function(){return c}));var r=o(35),c=function(){function e(n){Object(r.g)(this,n)}return e.prototype.componentDidLoad=function(){},e.prototype.render=function(){return Object(r.e)(r.a,null)},e}()}}]);

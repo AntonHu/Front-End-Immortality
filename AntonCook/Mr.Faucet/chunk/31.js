@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[31],{"96":function(n,o,t){"use strict";t.r(o),t.d(o,"taro_keyboard_accessory_core",(function(){return c}));var e=t(35),c=function(){function r(n){Object(e.g)(this,n)}return r.prototype.componentDidLoad=function(){},r.prototype.render=function(){return Object(e.e)(e.a,null)},r}()}}]);
