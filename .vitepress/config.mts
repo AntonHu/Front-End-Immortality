@@ -7,7 +7,7 @@ const sidebar = getSidebars();
 export default defineConfig({
   title: "Anton修仙传",
   description: "我的修仙生涯心法",
-  head: [["link", { rel: "icon", href: "/head.png" }]],
+  head: [["link", { rel: "icon", href: "/Front-End-Immortality/head.png" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
