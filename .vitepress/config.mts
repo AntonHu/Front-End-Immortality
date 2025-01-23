@@ -13,6 +13,7 @@ export default defineConfig({
     nav: [
       { text: "Anton", link: "/" },
       { text: "AntonCook", link: "https://antonhu.github.io/Mr.Faucet" },
+      { text: "Emoji Finder", link: "https://antonhu.github.io/emoji" },
     ],
 
     sidebar,

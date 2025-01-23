@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[40],{"106":function(n,t,c){"use strict";c.r(t),c.d(t,"taro_official_account_core",(function(){return r}));var e=c(35),r=function(){function o(n){Object(e.g)(this,n)}return o.prototype.componentDidLoad=function(){},o.prototype.render=function(){return Object(e.e)(e.a,null)},o}()}}]);

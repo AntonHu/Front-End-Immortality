@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{"99":function(n,t,o){"use strict";o.r(t),o.d(t,"taro_live_pusher_core",(function(){return c}));var r=o(35),c=function(){function e(n){Object(r.g)(this,n)}return e.prototype.componentDidLoad=function(){},e.prototype.render=function(){return Object(r.e)(r.a,null)},e}()}}]);

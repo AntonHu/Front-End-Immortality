@@ -11,7 +11,7 @@ hero:
       text: 开始学习
       link: /01.框架/React/React筑基心法
     - theme: alt
-      text: AntonCook
+      text: 玩会游戏
       link: https://antonhu.github.io/Mr.Faucet
 
 features:

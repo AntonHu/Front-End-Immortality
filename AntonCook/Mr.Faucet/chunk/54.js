@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[54],{"128":function(n,t,r){"use strict";r.r(t),r.d(t,"taro_voip_room_core",(function(){return c}));var e=r(35),c=function(){function o(n){Object(e.g)(this,n)}return o.prototype.componentDidLoad=function(){},o.prototype.render=function(){return Object(e.e)(e.a,null)},o}()}}]);
