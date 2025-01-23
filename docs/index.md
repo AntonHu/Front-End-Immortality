@@ -12,7 +12,7 @@ hero:
       link: /01.框架/React/React筑基心法
     - theme: alt
       text: AntonCook
-      link: /AntonCook/Mr.Faucet/index.html
+      link: ../Mr.Faucet/index.html
 
 features:
   - title: 框架
