@@ -12,7 +12,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Anton", link: "/" },
-      { text: "AntonCook", link: "../Mr.Faucet/index.html" },
+      { text: "AntonCook", link: "https://antonhu.github.io/Mr.Faucet" },
     ],
 
     sidebar,
