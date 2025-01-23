@@ -1,3 +1,5 @@
+# JS千锤百炼
+
 ## 数据类型
 
 ### 基础类型
@@ -54,33 +56,13 @@
 
 ###### 位运算
 
-```JavaScript
-// React源码中FiberFlag的状态逻辑采用了二进制的形式便于运算
-let flag = 0 // 0000
-const Update = 1 << 0 // 0001 0001往左位移0位
-const LayoutStatic = 1 << 1 // 0010 0001往左位移1位
-
-flag |= Update | LayoutStatic // 增加update和layoutStatic状态，先计算
-flag & Update // 判断是否有Update状态
-flag & LayoutStatic // 判断是否有LayoutStatic状态
-flag &= ~Update // 去除Update状态
-flag = ~flag // 清空所有状态
-```
+**暂时无法在飞书文档外展示此内容**
 
 ##### Number高频题
 
 ###### 0.1 + 0.2 === 0.3？
 
-```JavaScript
-// 由于浮点数运算的原因，0.1 + 0.2得到的结果是0.3的浮点数，是一个无限循环的二进制
-// 0.3 * 2 -> 0.6 取整数0，余0.6
-// 0.6 * 2 -> 1.2 取整数1，余0.2
-// 0.2 * 2 -> 0.4 取整数0，余0.4
-// 0.4 * 2 -> 0.8 取整数0，余0.8
-// 0.8 * 2 -> 1.6 取整数1，余0.6
-// 到此又回到了0.6的运算，接下来就是循环，以下是解决方案
-BigInt
-```
+**暂时无法在飞书文档外展示此内容**
 
 ### 对象
 
@@ -90,19 +72,7 @@ BigInt
 
 ##### new命令
 
-```JavaScript
-function _new(constructor, params) {
-    // arguments是类数组转为数组才能用数组api
-    const _arguments = Array.prototype.slice.call(arguments)
-    const _constructor = _arguments.shift()
-    // 继承原型
-    const obj = Object.create(_constructor.prototype)
-    // 执行构造函数
-    const result = _constructor.apply(obj, _arguments)
-    // 保证return的是对象
-    return Object.prototype.isProptotypeOf(result) ? result : obj
-}
-```
+**暂时无法在飞书文档外展示此内容**
 
 ##### this
 
@@ -114,16 +84,7 @@ function _new(constructor, params) {
 
 Tips: 多继承可以借 Object.assign(Sub.prototype, Super2.prototype)变向实现
 
-```JavaScript
-function Child() {
-    // 构造函数内部继承
-    Parent.call(this)
-}
-// 原型继承
-Child.prototype = Object.create(Parent.prototype) // 避免直接修改Super原型
-// 构造函数指向纠正
-Child.prototype.constructor = Child
-```
+**暂时无法在飞书文档外展示此内容**
 
 #### 对象高频题
 
@@ -146,28 +107,7 @@ Child.prototype.constructor = Child
 | Object.getOwnPropertySymbols | 获取自身Symbol属性             | ❌                 | ❌                 |
 | Reflect.ownKeys              | 获取自身所有属性               | ✅                 | ✅                 |
 
-```JavaScript
-const parent = { protoKey: 1 };
-const child = Object.create(parent) // protoKey作为child的原型链属性
-
-child.enumerableKey = 2 // enumerableKey为child的可枚举属性
-Object.defineProperty(obj, 'nonenumerableKey', {
-  value: 3,
-  enumerable: false, // 不可枚举
-});
-child[Symbol('symbolKey')] = 3; // symbol属性默认不可枚举，可通过defineProperty改为可枚举，但仍不可被 for...in 和 Object.keys 遍历
-
-for (const key in obj) { // 遍历可枚举属性
-  console.log(key); // 输出：protoKey, enumerableKey
-}
-
-// 非原型链上的属性，包含不可枚举属性，但不包含symbol属性
-const ownPropertyies = Object.getOwnPropertyNames(child); // ['enumerableKey', 'nonenumerableKey']
-// 非原型链上的symbol属性
-const ownSymblKeys = Object.getOwnPropertySymbols(child); // [Symbol(c)]
-// 
-const reflectOwnKeys= Reflect.ownKeys(child); // ['enumerableKey', 'nonenumerableKey', Symbol(c)]
-```
+**暂时无法在飞书文档外展示此内容**
 
 ### 数组
 
@@ -175,14 +115,7 @@ const reflectOwnKeys= Reflect.ownKeys(child); // ['enumerableKey', 'nonenumerabl
 
 ##### Sort
 
-```JavaScript
-let arr = [3,2,1,10,20,30]
-arr.sort() // [1,10,2,20,3,30] 将数组元素转为字符串进行ASCII升序排序
-// 使用比较函数
-arr.sort((a, b) => 大于0，b在a前面；小于0，a在b前面；等于0，ab位置不变)
-arr.sort((a, b) => a - b) // [1,2,3,10,20,30] b在前升序
-arr.sort((a, b) => b - a) // [1,2,3,10,20,30] a在前降序
-```
+**暂时无法在飞书文档外展示此内容**
 
 ### 类型高频考题
 
@@ -194,79 +127,15 @@ arr.sort((a, b) => b - a) // [1,2,3,10,20,30] a在前降序
 
 ##### valueOf
 
-```JavaScript
-/** 普通对象 */
-var obj = {}
-obj.valueOf() // {} 返回对象本身
-
-/** 数组 */
-var arr = [1,2,3]
-arr.toString() // [1,2,3] 返回数组本身
-
-/** Number对象 */
-var numObj = Number(123)
-numObj.valueOf() // 123 javascript重写了valueOf，返回原始值
-
-/** 基础类型 */
-var num = 123
-num.valueOf() // 123 返回原始值
-```
+**暂时无法在飞书文档外展示此内容**
 
 ##### toString
 
-```JavaScript
-/** 普通对象 */
-var obj = {}
-obj.toString() // "[object Object]" 返回类型字符串
-
-/** 数组 */
-var arr = [1,2,3]
-arr.toString() // "1,2,3" 数组默认重写了toString，返回逗号拼接的字符串
-Array.prototype.toString.call(arr) // "1,2,3" 等于上面
-Object.prototype.toString.call(arr) // "[object Array]" Object原型链toString未重写，返回类型字符串
-
-/** Number对象 */
-var numObj = Number(123)
-numObj.toString() // "123" Number对象重写了toString，返回原始值的字符串
-Number.prototype.toString.call(arr) // "123" 等于上面
-Object.prototype.toString.call(numObj) // "[object Number]" Object原型链toString未重写，返回类型字符串
-
-/** 基础类型 */
-var num = 123
-num.toString() // "123" 转成字符串
-```
+**暂时无法在飞书文档外展示此内容**
 
 #### valueEqual等值判断
 
-```JavaScript
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-function valueEqual(a, b) {
-  if (a === b) return true;
-  if (a == null || b == null) return false;
-  if (Array.isArray(a)) {
-    return Array.isArray(b) && a.length === b.length && a.every(function (item, index) {
-      return valueEqual(item, b[index]);
-    });
-  }
-  var aType = typeof a === 'undefined' ? 'undefined' : _typeof(a);
-  var bType = typeof b === 'undefined' ? 'undefined' : _typeof(b);
-  if (aType !== bType) return false;
-  if (aType === 'object') {
-    var aValue = a.valueOf();
-    var bValue = b.valueOf();
-    if (aValue !== a || bValue !== b) return valueEqual(aValue, bValue);
-    var aKeys = Object.keys(a);
-    var bKeys = Object.keys(b);
-    if (aKeys.length !== bKeys.length) return false;
-    return aKeys.every(function (key) {
-      return valueEqual(a[key], b[key]);
-    });
-  }
-  return false;
-}
-export default valueEqual;
-```
+**暂时无法在飞书文档外展示此内容**
 
 ## 函数
 
@@ -278,21 +147,13 @@ export default valueEqual;
 
 所有对象的原型链终点，所有对象都继承Object.prototype对象的方法和属性（除了Object.create(null)）
 
-```JavaScript
-Object.prototype.__proto__ === null
-```
+**暂时无法在飞书文档外展示此内容**
 
 #### Function.prototype
 
 所有函数对象的原型，所以有以下有趣的自循环原型关系：
 
-```JavaScript
-// Function函数对象的原型 指向 Function构造函数的prototype
-Function.__proto__ === Function.prototype // 输出: ƒ () { [native code] }
-// Function.prototype是函数对象，只有constructor和__proto__的空函数
-// 是对象所以原型就会指向Object.prototype
-Function.prototype.__proto__ === Object.prototype
-```
+**暂时无法在飞书文档外展示此内容**
 
 ### eval
 
@@ -300,10 +161,7 @@ Function.prototype.__proto__ === Object.prototype
 
 非严格模式，运行作用域为调用eval所在作用域；严格模式，作用域会eval内部临时作用域；
 
-```TypeScript
-eval('var x = 1')
-console.log(x) // x is not defined
-```
+**暂时无法在飞书文档外展示此内容**
 
 ### 箭头函数和普通函数区别
 
@@ -319,28 +177,7 @@ this指向动态作用域，函数被调用时的上下文this指向
 
 #### 节流防抖
 
-```JavaScript
-function throttle(fn, wait) {
-    let timer = null
-    return function() {
-        if (timer) return
-        timer = setTimeout(() => {
-            fn.apply(this, arguments)
-            timer = null
-        }, wait)
-    }
-}
-function debounce(fn, delay) {
-    let timer = null
-    return function() {
-        if (timer) clearTimeout(timer)
-        timer = setTimeout(() => {
-            fn.apply(this, arguments)
-            timer = null
-        }, delay)
-    }
-}
-```
+**暂时无法在飞书文档外展示此内容**
 
 ## ES6+
 
@@ -350,45 +187,7 @@ function debounce(fn, delay) {
 
 #### extends
 
-```JavaScript
-const __extends = (child, parent) => {
-    // parent不是构造函数也不是null则无法继承
-    if (typeof parent !== 'function' && parent !== null) 
-        throw new TypeError(`Class extends value ${String(parent)} is not a function or null`)
-    // 复用类继承函数，这是babel打包的模块化的复用处理
-    if (this && this.__extends) {
-        return this.__extends(c, p)
-    }
-    /** 静态属性继承 */
-    const extendsStatics = (c, p) => {
-        // 支持setPrototypeOf则直接使用
-        if (Object.setPrototypeOf) {
-            Object.setPrototype(c, p)
-            return
-        }
-        // 支持__proto__则直接使用
-        if ({__proto__: []} instanceof Array) {
-            c.__proto__ = p
-            return
-        }
-        // babel回退方案，遍历parent显示属性复制到child
-        // 实际上这是不符合setPrototypeOf机制的，复制的属性无法实现动态化，父类增加静态属性方法，子类无法访问
-        for (const prop in parent) {
-            if (parent.hasOwnPrototype(prop)) {
-                child[prop] = parent[prop]
-            }
-        }
-    }
-    // 1. 继承静态属性方法，子类构造函数原型链继承
-    extendsStatics(child, parent)
-    // 2. 继承实例属性方法，子类实例原型链继承
-    child.prototype = Object.create(parent === null ? parent : parent.prototype)
-    // 3. 重置被覆盖的构造函数
-    child.prototype.constructor = child
-    // 4. 添加 super 方法，用于调用父类构造函数
-    child.super = parent
-}
-```
+**暂时无法在飞书文档外展示此内容**
 
 #### super
 
@@ -406,23 +205,7 @@ const __extends = (child, parent) => {
 
 #### ... 拓展运算符兼容写法
 
-```JavaScript
-function _spreadObject(target) {
-    for(var i = 1; i < arguments.length; i++) {
-        var source = arguments[i]
-        if (source) {
-            for (var key in source) {
-                if (Object.prototype.hasOwnProperty.call(source, key)) {
-                    target[key] = source[key]
-                }
-            }
-        }
-    }
-    return target
-}
-// const newObj = {...oldObject, ...otherObject}
-var newObj = _spreadObject({}, oldObject, otherObject)
-```
+**暂时无法在飞书文档外展示此内容**
 
 ## 异步
 
@@ -493,24 +276,11 @@ JS采用分代式垃圾回收机制，内存分为新老生代空间
 
 #### addEventListener
 
-```JavaScript
-addEventListener('name', handler, isCapture) // isCapture是否捕获阶段，默认冒泡阶段
-```
+**暂时无法在飞书文档外展示此内容**
 
 #### Event和CustomEvent
 
-```JavaScript
-const event = new Event('name', {
-    bubbles: true, // 是否冒泡，false则只触发捕获阶段
-    cancelable: true // 是否可取消，只有为true，preventDefault才能生效
-})
-event.cancelBubble // true相当于stopPropagation
-const customEvent = new CustomEvent('name', {
-    detail: { data }, // 比Event多了detail
-    bubbles: true
-    cancelable: true
-})
-```
+**暂时无法在飞书文档外展示此内容**
 
 #### dispatchEvent
 
@@ -554,33 +324,8 @@ EventTarget.dispatchEvent，只要有preventDefault则返回false
 * `interactive`（网页已经解析完成，但是外部资源仍然处在加载状态）
 * `complete`（网页和所有外部资源已经结束加载，`load`事件即将触发）
 
-```JavaScript
-document.onreadystatechange = function () {
-  if (document.readyState === 'interactive') {
-    // ...
-  }
-}
-```
+**暂时无法在飞书文档外展示此内容**
 
 ### 拖拽
 
-```JavaScript
-<div draggable="true">
-  此区域可拖拉
-</div>
-
-var dragged = null
-document.addEventListener('dragstart', e => {
-  dragged = e.target; // 保存被拖拉节点
-  var img = document.createElement('img');
-  img.src = 'http://path/to/img';
-  e.dataTransfer.setDragImage(img, 0, 0); // 节点拖拽时的样式
-}, false);
-document.addEventListener('drop', e => {
-  e.preventDefault(); // 防止事件默认行为（比如某些元素节点上可以打开链接）
-  if (e.target.className === 'dropzone') {
-    dragged.parentNode.removeChild(dragged); // 删除原位置节点
-    e.target.appendChild(dragged); // 将被拖拉节点插入目标节点
-  }
-}, false);
-```
+**暂时无法在飞书文档外展示此内容**

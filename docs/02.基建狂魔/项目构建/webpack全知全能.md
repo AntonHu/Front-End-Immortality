@@ -1,3 +1,5 @@
+# Webpack全知全能
+
 ## 模块化
 
 ### UMD
@@ -503,19 +505,19 @@ module.exports = {
 
 从你项目的package.json中的scripts看出，webpack的打包指令只需要一句 `webpack --config ***`
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NzRjYTNmMzNiZGZiNDllNmY3YjMyNmY0M2FhYzdhYTJfeGpMVTFhelA4bk5QVzlIYThiWlJDNENxaU9ZU3QzOUNfVG9rZW46UXhHVWJkbXhyb3pHREJ4SXdqOGMwOWhvbnJkXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmJiYWZlMjU4MDFiZDI4OThlYWQ3MDBiMGEwMDMxYmFfZlREVDk1cUdRVjN0TE5DWXNaM3Z1dlRFbHJXVWt4ZWJfVG9rZW46UXhHVWJkbXhyb3pHREJ4SXdqOGMwOWhvbnJkXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 2. **找到项目中的webpack包**
 
 于是在node_modules目录下找到名为webpack的包，打开package.json
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YTAxNmI5YjE1MzExNWZhNGFmZjhhNjM3ZmZiZDNhZmJfcGIwc05obnBEdEEzWFJxZlpLZ085MEN2VXd5Mm1LYk9fVG9rZW46VVZ4T2JlUFdmb2FDbHJ4dldzcWNkN3hHbnFjXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGExZWFlMzMyODNlYjlkMWExMjJjMmRmNzNmODM2YzJfRnU3UnJUT2JiTE9ndlpjTkxSOTNUWmNzRjNxTDk3OVZfVG9rZW46VVZ4T2JlUFdmb2FDbHJ4dldzcWNkN3hHbnFjXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 3. **package.json中的bin属性**
 
 bin属性即是脚手架指令的设置，其中webpack指向的路径就是 `webpack --config ***`命令行指向的执行脚本。
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MDk0OWUxNTIzNDk2Mjk0MmFjZDViZDEyZjRkZTk4ZDJfSjFocHczVFpneng5Z1BicGdRTUs1aE5Cbzd1cVdyV0RfVG9rZW46UE5CeWJla2NWb2hwWXV4M1o4WWNYbGxHbjRiXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDU1NjVkYjM4OTBjNjU1NTJiMmU2ODUyOWIyODQ1ZDRfQkx0aGtmU1BBdnVkUEJ5TmtzNTNaeGpTWnlmdnc0dXVfVG9rZW46UE5CeWJla2NWb2hwWXV4M1o4WWNYbGxHbjRiXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 这其实就是脚手架命令行的实现方式，如果你想自定义自己的脚手架指令，例如实现 `my-webpack --config ***`，只需要在bin属性下增加 `my-webpack`属性，并指定你自己的脚本路径即可。
 
@@ -523,7 +525,7 @@ bin属性即是脚手架指令的设置，其中webpack指向的路径就是 `we
 
 这个脚本就在webpack仓库中的 `bin/webpack.js`
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=M2ZhODFlZmYwZGNiNTRiYWIzNDgyMjYyOWNjZDJiN2ZfS3dXZjJlNkhVcUtYRUtrcU5FRnpqYjE0aTJZQzlERWxfVG9rZW46QWIxOGI2TUdxb2ltWmV4ZXcxQmNKMFJXbnppXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NzM2ZDEzNDUyMmM1ZDZlZjBkOWExNTJkZDNiNzQ4MWNfem1EcWlsVmtjeFJwNGxmNWFOSEM3OVpMTlRQR200U0xfVG9rZW46QWIxOGI2TUdxb2ltWmV4ZXcxQmNKMFJXbnppXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 #### 阅读webpack命令行打包脚本
 
@@ -531,25 +533,25 @@ bin属性即是脚手架指令的设置，其中webpack指向的路径就是 `we
 
 先忽视前面一堆变量函数的定义，直接看末尾脚本的执行
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NTY1ZGQ0YTQyODAzNzk2Y2RjNWJhZTVkMzYxYTAwNWFfb3V3VHJoSHZIR1pVUERUa29zeW53VDhkVDVyenNHY2lfVG9rZW46WHZVNmJCdkZZbzBGNm94Y0g5OWNnUXJxblpmXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTBiYzViYzk5Mjc2ZWU0OGNmYjk2MWRiNjQwNjM0MjZfckdjTFZqSDN3SUdGMEFFc25HVFJDaDNFUzJYTThiNUJfVG9rZW46WHZVNmJCdkZZbzBGNm94Y0g5OWNnUXJxblpmXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 2. **判断是否安装了****`webpack-cli`**
 
 脚本判断了cli.installed属性，该值由函数isInstalled返回值决定，通过看代码逻辑可知，就是判断 `webpack-cli`包是否安装
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmM2NTU3NmNjNjM5NzFiM2E4NzM1YWM2NTEwNzAwZDdfRjNlVGlTWmpNRDV2T082OE5rU2NFWFBOcktKQ3hDNE9fVG9rZW46QjhhamJSbnhlb1kyaGx4cFNycGNFNnowbk1lXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGZiNTBkNDViNzFmOTk5OTE1YTU4OTNmZGU2OWRhNGJfcVdPdk1uUGNjbVpEQ1hwWnBLYXVJb0xVblRsd01UdnlfVG9rZW46QjhhamJSbnhlb1kyaGx4cFNycGNFNnowbk1lXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 3. **安装****`webpack-cli`**
 
 可见webpack打包的执行必须还要安装webpack-cli，如果没有安装的情况下执行了打包指令，脚本会提醒你缺少这个第三方包，并且通过问询的形式帮你自动安装：
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MDk3NTZmOGRlNTdmMmM4ODk4NTBjYmMxZjY0NGQ5M2JfcGVqYTMwazN1OGJyWG1kYldjZ0NTTEN2UFJXbHVFSllfVG9rZW46RkpHQmJEM3NQb1lEMGt4ZlZ4VWNxZFFwbjlmXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MDQwMmRlNzFkOGQ4OGExOGU3ZWMxNTU4YWI1YzVhMWVfT3FZZURlRWNJbFhqZDFDanV2R2JCd1kxS2ltdWdVemJfVG9rZW46RkpHQmJEM3NQb1lEMGt4ZlZ4VWNxZFFwbjlmXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 4. **执行****`runCli`**
 
 在确定安装了webpack-cli之后，脚本将执行runCli函数，函数结尾require导入了webpack-cli的bin指令脚本，至此webpack打包的入口脚本执行结束，接下来前往webpack-cli包
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=OWM3OTE5YTM3ZTkwNDQwNTRlOGE1ZDE4ZWZhYjE5NjNfVUw0ZWFnVXliVTRMVVVQY09FQ2VBYWs5RzZzS1EwTklfVG9rZW46TnZaTmJ1dlF1b3BmN2R4VzVTU2NkRHVWblhmXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YzIxOTNkNjE1N2Y0ODU3Yzg5ZDNiZGU5NmNlZTc1OTVfT2JZbWRhS1JuNXRUYWxIdk1iQ0RESmlGbGVWZURLV2ZfVG9rZW46TnZaTmJ1dlF1b3BmN2R4VzVTU2NkRHVWblhmXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 #### 阅读webpack-cli命令行脚本
 
@@ -557,39 +559,39 @@ bin属性即是脚手架指令的设置，其中webpack指向的路径就是 `we
 
 根据上面的流程，我们来到了webpack-cli的package.json文件，知道了bin下的webapck-cli指令配置的脚本路径
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NzFjM2RhN2FjYzJhM2EyZmFmZjM2YTM5ODE3Y2E3NTdfZm9LOHpodllWc2JvTWRuODV5ZlZkV1JaTHJKSndRZVZfVG9rZW46V2FsRWI0dHo3b1ZpZWJ4T083NmNCNFVNbmlnXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MTBmZWNkY2NiMmYzZThiZmYwYjkxOGViYjhkNjVjZjFfZ2xNM1daZkxBa1RZRG5oSEZGdXpWTUx5WmFYam5MZkVfVG9rZW46V2FsRWI0dHo3b1ZpZWJ4T083NmNCNFVNbmlnXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NjM0MTYyM2I2YzQyNzc0ZDBkYWNmZDZjZTY0NTc1MmJfMm1Ic1V2bHQyMW1vRkU4bjM5cFJqVjhRTnh6VnNpTXlfVG9rZW46UlJzaWIybEpXb01wMER4TVAzMmNLNVhMbm5nXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MTUyNjk1NjI5ZTZjNTEzNmZiNWEzNWE0OGFhNGYyYmFfTE1SckVobUtybUNiZVpVWEZFTEE4VFdxc0hSNFFVUFVfVG9rZW46UlJzaWIybEpXb01wMER4TVAzMmNLNVhMbm5nXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 2. **阅读webpack-cli/bin/cli.js**
 
 内容很少，主要是另一个脚本的导入使用，前往目标脚本查看**runCLI**的实现
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDZjNmJjYmJkMzBjOWM2NTY0NTk4ZGQ1NWYyYzE3YzdfS3VPeEpsd2RBelZQQzY1cU8xdEZoUWFDcDlZdVdVNlVfVG9rZW46VmdxemJKUFFDbzZ2S2t4czcwaGNMZmlYbmVjXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=OGFjZTBjM2IxYjNjZGUzNDIxZTBiMzEyOTZlYTg4NmVfc0FqZldaNGdINUswRTdWaWNOTU5Hd3JZcUFXeGFJRlFfVG9rZW46VmdxemJKUFFDbzZ2S2t4czcwaGNMZmlYbmVjXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 3. **阅读webpack-cli/lib/bootstrap.js**
 
 内容也是很少，前往目标脚本查看**webpackCLI**的实现
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MTMyY2VkMmZkOGNiNzAxZjlhMDBkMTkwYTlmMWRjY2Nfb2pFbXBBY25PZzA5NDFMVUVjdHpGSm5xRlNycWdOZ0tfVG9rZW46SGo2NGJvSEtLb3JRa1d4Zll6WmNrTDE3bkhlXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NmM5YTg3MTEyOTE3ZWI1OThmYmEwYjA1YmU0NjFkNTFfaGRvdUFGaUk1SVdnY2RRdUlJRG41SDNWdkZjQWM1ZW9fVG9rZW46SGo2NGJvSEtLb3JRa1d4Zll6WmNrTDE3bkhlXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 4. **阅读webpack-cli/lib/webpack-cli.js**
 
 调用class WebpackCLI的**run**函数，**loadWebpack**相当于 `this.webpack = require('webpack')`这里就不贴源码了
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=OTE3NmRiMTE4ZjZjZjhiMjhjMmY0ZWEwNzVjMDI1ZjBfWkk1eHV4SFc1UFdlSXZiU3d6Vk42RVAwWktqM2trcHlfVG9rZW46U0lpQ2JSVXRRb0lpR3Z4NVlHZWN4bVliblFjXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2I3MDkwNGQxMTdmNWE0NGJjNTVmZGU3NTk1OWI2YjhfcTZpd094Q1gzQkluZEIyUGoyUjlUaW5LSEFvTzlPcTBfVG9rZW46U0lpQ2JSVXRRb0lpR3Z4NVlHZWN4bVliblFjXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 require('webpack')执行的是webpack包中package.json的**main**属性指向的脚本路径
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YmJlMmExMWY5MmIxMWYyMGMyOGY5NDA4ZGRlYjcwZTBfRkVhNVhUZWNSZ3VtbG1UaWZRenN3a0oyMzhjR3pabEFfVG9rZW46WDVuZWIxY3dTb1poQzR4a290QmMyZW5sbmkwXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YzVhMTZlNjQ2YTkwMmRmMzdlZTRhNjdjMzMzZmUwZTFfSlNVVGUxdFpyWkhhdWpQbVIwS28xOERjSnV5RXNNa3hfVG9rZW46WDVuZWIxY3dTb1poQzR4a290QmMyZW5sbmkwXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 **runWebpack**函数创建了compiler，本次打包的管理对象
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YzVjYzdlNTljODRjYjE3YzNlYmFjNTNhYjg2ZjVmNmZfNHRnR3dUa0F2TUFTeXl2RDNtOHdKYjBjamNDWWx1UVdfVG9rZW46SmlOcGI4SldWbzBGYzZ4blRnamNpUzgybm1kXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YmJhN2E3ZDdkNjU1NzI0MDQ0YzQ0NTBkOGFiYjY0NGZfM2xHT25SR2ZicGdFQWxPbFpMRUo5aVNURHl0bzNhZHlfVG9rZW46SmlOcGI4SldWbzBGYzZ4blRnamNpUzgybm1kXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 **createCompiler**其实就是携带options参数调用webpack，拿到的返回值就是compiler对象
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NTVjOTUwZjg3ZmRjYTg4NzYzOGQzZWY3NTc0MjgxYWFfMmN3cWR4MTE0dG53YXNTZ283QXN6Y3dWbUpQRFdPZU1fVG9rZW46SHZtUGJxMjlqb0J6aFV4OE94OGNyZjNHbjNjXzE3Mzc1MzM3NzY6MTczNzUzNzM3Nl9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ODlkMTRlYzQ5NWIyNDAzZjNiYzc2ODNhMmNkNzRmMjdfSUFXNml0UjVnRWNxT2VaS3NjdXdMSkI5a09wOEt0bFRfVG9rZW46SHZtUGJxMjlqb0J6aFV4OE94OGNyZjNHbjNjXzE3Mzc2MTIyMzQ6MTczNzYxNTgzNF9WNA)
 
 ### 插件开发
 

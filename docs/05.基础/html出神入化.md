@@ -1,3 +1,5 @@
+# Html出神入化
+
 ## html
 
 ### 网页解析流程
@@ -38,7 +40,7 @@ HTML解析完成，DOM和CSSOM合并成**渲染树**Render Tree，包含节点�
 
 渲染主线程生成绘制指令，合成线程创建多个分块器线程进行图层分块处理，GPU进行光栅化处理确认像素点的渲染，最后执行绘制指令渲染页面。
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjc5ODJhNDAwZGVhOGI5YTJhOGJhZGM4MjdlMjBkMWVfNXplUVJQOHhVZHdBYlhnUk9UMGVoWE9zc0VhN2c0a2lfVG9rZW46WTd5SmI4Q0Nxb25hSnh4QVdWZGNkTGt3bjJmXzE3Mzc1MzQwMjg6MTczNzUzNzYyOF9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDZjMWFhNTRmMTAwODRlNDFmOWQ3ODVkNDE3NGU4MjlfU0l3QmxkVDBMTUp3RzRJQ05EOE5zVU5WRjI5VjhHSHBfVG9rZW46WTd5SmI4Q0Nxb25hSnh4QVdWZGNkTGt3bjJmXzE3Mzc2MTMwNzU6MTczNzYxNjY3NV9WNA)
 
 [渲染流程精讲](https://zhuanlan.zhihu.com/p/586060532)
 
@@ -315,19 +317,3 @@ img.decode().then(() => {
 ```
 
 如果 `image.webp` 和 `image.jpg` 都加载失败，会显示 `fallback.jpg`。
-
-## CSS
-
-### BFC
-
-### vertical-align
-
-垂直方向上的对齐，只对行内元素生效，不继承，即设置在父级块元素无法生效
-
-`baseline`与父级基线对齐
-
-`middle`与 父级基线+父级高度一半 对齐
-
-`top`顶部与所在行顶部对齐
-
-`bottom`底部与所在行底部对齐

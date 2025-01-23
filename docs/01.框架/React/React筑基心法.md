@@ -426,7 +426,7 @@ class Index extends React.Component {
 
 ## 生命周期
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MjRmODgwNGJjOTUzNWVjYmQ0MmJmM2Q3NmJlN2M1YTJfb0UxTVpyWE85d3hGM1QxMDg5Y3lpQjZTN1Z3TXdER0JfVG9rZW46UU1NOGIySHhzbzJidzF4MUFiQ2NpNkFNbjhlXzE3Mzc0NDU5Mzk6MTczNzQ0OTUzOV9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NjRmZGFkZjU5MWM0MWNlNjJjOTc0Y2VhZjlkNGRhN2ZfUGZOcjgzVmtTb0lDQnY3RzVkdDlFUk93cHB2T1NmS25fVG9rZW46UU1NOGIySHhzbzJidzF4MUFiQ2NpNkFNbjhlXzE3Mzc2MTIwODQ6MTczNzYxNTY4NF9WNA)
 
 ### 类组件
 
@@ -811,7 +811,7 @@ export function commitClassLayoutLifecycles(
 
 执行顺序：constructor -> getDerivedStateFromProps / componentWillMount -> render -> componentDidMount
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ODgwZmIwMTRjZWRjNWFhNmU1NTYwYzczNGIwNzA3M2NfdkhqaXNqdXppNkpWbjFMR2VWM1VQbmNQUnlwS0w5c29fVG9rZW46SVQ2N2J6c24wb1J4a2x4M2YxamN5N1dVbk5nXzE3Mzc0NDU5Mzk6MTczNzQ0OTUzOV9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MGYyOWQ4NGQ4Y2JhOWVkYTc4MTE0YTY0MzRlZjg1NGVfVzNPbzFtYmZ6SnFlelZvcDhoY3VHYVBWYmgzVXJGZDhfVG9rZW46SVQ2N2J6c24wb1J4a2x4M2YxamN5N1dVbk5nXzE3Mzc2MTIwODQ6MTczNzYxNTY4NF9WNA)
 
 #### 组件更新
 

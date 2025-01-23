@@ -1,3 +1,4 @@
+
 ## 响应式布局方案
 
 ### flexible
@@ -120,7 +121,7 @@ Jpush极光推送
 3. 使用node服务处理iframe嵌套微信文章的跨域问题，node服务通过text形式请求微信文章，然后替换html文本里涉及跨域的src，再以contentType为html返回给前端页面
 4. ios软键盘回弹空白：监听input失去焦点，延时对页面的的滚动距离进行回调
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NjU2YTcxYWNiMTNkNTliYzgyYTI3NTZhODdmZDFjZjJfUWRhQjV5YnBWaFFqdzIxRlZ0SXVnUGtqNlZWdUFjSWpfVG9rZW46SDU2RWJxOUtob3JJcUN4SThGV2NUVWM3bmNlXzE3Mzc1MzQzMTU6MTczNzUzNzkxNV9WNA)
+![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MTFkMzkwZTA2YmNkYmRkNWFiMmM5MmM4OWJiMDAwNDZfanJhektJWExUT1E0akRiTjhZVWxIaW9XZmRoM2VQWUJfVG9rZW46SDU2RWJxOUtob3JJcUN4SThGV2NUVWM3bmNlXzE3Mzc2MTIzOTY6MTczNzYxNTk5Nl9WNA)
 
 ```TypeScript
 移动端默认passive为true，调用preventDefault不会生效，可以让浏览器执行默认的滚动优化处理，减少主线程阻塞
