@@ -1,22 +1,20 @@
 import fs from 'fs';
 import path from 'path';
-import { gitAddCommander, gitStatusCommander, gitCommitCommander } from './gitScripts.js';
+import { gitAddCommander, gitStatusCommander, gitCommitCommander, gitPushCommander } from './gitScripts.js';
 import chalk from 'chalk';
 
 // 获取项目的根目录
 const projectRoot = process.cwd();
-// 拼接 docs 文件夹的路径
-const docsPath = path.join(projectRoot, 'docs');
+// 需要忽略的目录
+const ignoredDirectories = ['node_modules', '.git'];
 
 // 递归地检查目录中的空文件夹
 function checkEmptyDirectories(dirPath) {
     const stats = fs.statSync(dirPath);
     // 如果不是目录，直接返回
     if (!stats.isDirectory()) return;
-    // 只处理 docs 文件夹及其子文件夹
-    // if (dirPath !== docsPath && !dirPath.startsWith(`${docsPath}${path.sep}`)) {
-    //     return;
-    // }
+    // 跳过忽略的目录
+    if (ignoredDirectories.includes(path.basename(dirPath))) return
 
     const files = fs.readdirSync(dirPath);
     if (files.length === 0) {
@@ -41,10 +39,14 @@ function checkEmptyDirectories(dirPath) {
     files.forEach(file => checkEmptyDirectories(path.join(dirPath, file)));
 }
 
-// 调用函数检查项目docs目录下的空文件夹
-checkEmptyDirectories(docsPath);
+// 调用函数检查项目根目录下的空文件夹
+checkEmptyDirectories(projectRoot);
 // 自动添加所有文件到 git
 
-gitAddCommander()
-gitStatusCommander()
-gitCommitCommander()
+(async () => {
+    gitAddCommander()
+    gitStatusCommander()
+    await gitCommitCommander()
+    await gitPushCommander()
+})()
+

@@ -2,6 +2,11 @@ import childProcess from "child_process";
 import inquirer from "inquirer";
 import chalk from "chalk";
 
+export const gitResetCommander = () => {
+    const resetResult = childProcess.execSync(`git reset`);
+    console.log(chalk.red(`已执行 git reset 指令: \n${resetResult.toString()}`));
+};
+
 export const gitAddCommander = (path = ".") => {
     childProcess.execSync(`git add ${path}`);
     console.log(chalk.red(`已执行 git add 指令: ${path}`));
@@ -36,9 +41,11 @@ export const gitStatusCommander = () => {
             console.log(chalk.green("本次提交有以下变更文件:"));
             console.table(changes);
         } else {
+            gitResetCommander();
             console.log(chalk.red("无变更文件"));
         }
     } catch (err) {
+        gitResetCommander();
         console.log(chalk.red("无法获取 git status:", err));
     }
 };
@@ -84,6 +91,39 @@ export const gitCommitCommander = async () => {
             `已执行 git commit -am 指令: ${commitType}${commitMessage}`
         );
     } catch (error) {
+        gitResetCommander();
         console.error("Failed to execute git commit:", error);
+    }
+};
+
+export const gitPushCommander = async (remote = "origin") => {
+    // 使用 inquirer 提示用户输入 commit message
+    const answer = await inquirer.prompt([
+        {
+            type: "input",
+            name: "ifPush",
+            message: chalk.blue("是否要推送到远程,默认是(Y/N):"),
+            validate: (input) => {
+                if (input.trim() !== "" && input.trim() !== "Y" && input.trim() !== "N") {
+                    return "请输入 Y 或 N";
+                }
+                return true;
+            },
+            default: "Y",
+        },
+    ]);
+
+    const { ifPush } = answer;
+    if (ifPush !== "Y") {
+        console.log(chalk.red("请自行推送到远程仓库"));
+        return;
+    }
+    try {
+        // 执行 git push 命令
+        const pushResult = childProcess.execSync(`git push ${remote}`);
+        console.log(`已执行 git push 指令：\n${pushResult.toString()}`);
+    } catch (error) {
+        gitResetCommander();
+        console.error("Failed to execute git push:", error);
     }
 };
