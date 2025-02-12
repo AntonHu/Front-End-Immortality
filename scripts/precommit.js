@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { gitAddCommander, gitStatusCommander, gitCommitCommander, gitPushCommander } from './gitScripts.js';
+import GitCommander from './gitScripts.js';
 import chalk from 'chalk';
 
 // 获取项目的根目录
@@ -44,9 +44,11 @@ checkEmptyDirectories(projectRoot);
 // 自动添加所有文件到 git
 
 (async () => {
-    gitAddCommander()
-    gitStatusCommander()
-    await gitCommitCommander()
-    await gitPushCommander()
+    const gitCommander = new GitCommander();
+    const pullResult = await gitCommander.pull()
+    const addResult = pullResult && gitCommander.add()
+    const statusResult = addResult && gitCommander.status()
+    const commitResult = statusResult && await gitCommander.commit()
+    commitResult && await gitCommander.push()
 })()
 
