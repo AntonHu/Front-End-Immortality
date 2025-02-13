@@ -11,7 +11,7 @@ Pnpm 本质上就是一个包管理器，这一点跟 npm/yarn 没有区别，�
 * 节约磁盘空间
 * 提升安装速度
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2Y0MTEzMGE5YTI1MmQ0ZjIwYmFmMGU1NjM4N2UyMDJfTGJUVW5hWEpXSlYxOHU5THM3TDFJS0xGdHF5MHRZVG1fVG9rZW46VHFBRmJlUnVrbzlwSEt4WTh0SGNVRmRWbjJkXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438006834](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438006834.jpg)
 
 另外他还能解决 npm/yarn 【幽灵依赖】的问题
 
@@ -19,7 +19,7 @@ Pnpm 本质上就是一个包管理器，这一点跟 npm/yarn 没有区别，�
 
 ---
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=N2ZiOGVjZWFlMGQ4NDdhOTIzMzQwMjRmYWNmOTZhZjRfR1FKYjY3WHdGbGpEUGNGV1hxekV1WmVGU3N2THhNbWlfVG9rZW46UjZnemJRTDFwb1JXNkF4dDlCcGNmcDFqbnNjXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438024402](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438024402.jpg)
 
 ## pnpm的特性
 
@@ -29,13 +29,13 @@ Pnpm 本质上就是一个包管理器，这一点跟 npm/yarn 没有区别，�
 
 安装的依赖包文件，会通过hard links硬链接的形式存储在pnpm创建的store目录下，默认情况下全局只会有一个store目录 .pnpm-store，所有的项目都共用这一目录下的硬链接
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MTBmYmJkNmExMzYwODA4MmNmNjc1ZGQzOTFiZWRmMThfSk94b0xsTWt0dEl5dmZ4cm5wNm1xeTZNVUEwWnRPQ3pfVG9rZW46WTdRdWJCbWJPb2EyUEJ4Nk5VQmNySjVHbllmXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438042332](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438042332.jpg)
 
 ### node_modules
 
 创建非扁平化的 node_modules 文件夹
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ODQ4ZTQ5MDAxNjJkODI5NDlhNTM3NTBlZDY4MzY0YzFfcU1Qazg3clVwZUdXNEVEWWpBNW4zTW55NlQ4UWpnRFBfVG9rZW46R1pHY2JEdWVnb2JJamx4Tk1ybmMwWWVHbnpiXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438053524](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438053524.jpg)
 
 npm/yarn 如今的安装的node_modules都是拍平的形式，而pnpm默认是不拍平的，这能解决【幽灵依赖】，如果想要继续使用拍平的方式，也支持配置.npmrc hoist = true
 
@@ -50,7 +50,7 @@ npm/yarn 如今的安装的node_modules都是拍平的形式，而pnpm默认是�
 1. ### 节约磁盘空间，提升安装速度
 2. #### 装过的包都通过 hard links 存储在磁盘的 .pnpm-store 文件夹内，所有项目共用，相同的包直接复用
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YTMzZjBkMzJkNTc3MzA2MzQ1ODU0MjAwY2E1OTQ1ZWRfdU1KZHhCUkVrWlNkeWg3N1BIQXVseVRiam13dEdqSHNfVG9rZW46Q0hxYWJOaWVkb3BpSzl4T0lLYmNRbjRMbldkXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438067699](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438067699.jpg)
 
 2. 不采用拍平的方式，绝不会下载重复的包
 3. 当更新一个包时，如果原版本有100个文件，新版本只新增了1个文件，pnpm不会重新下载101个文件，而只是下载新增的1个文件
@@ -68,11 +68,11 @@ node_modules采用循环链式依赖的方式进行安装，由此产生的问�
 
 配置该项目依赖两个包 fs-extra jsonfile
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MzFiYmU4N2M1NWY3YWZmN2ZhOGIxMGEyYWY1ZWNjOWRfcnY4ZjRMaG9Pck5vT1N4THRCd01yQjNSRUNuNjRpaFlfVG9rZW46VFBDbmJCSjhub0lEcEZ4T01TTGNTT1NzbjZkXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438085128](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438085128.jpg)
 
 执行 npm install 产生的 node_modules
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MmQwMWJkMjM1ZTdhNmJmYWY5NDRkODIwNmYwMzlkNWZfdU1lV1hlMjc2d0o2V05GaTNHc0JSQm80d1BNVDZjWk9fVG9rZW46VmdWOGIwTlhOb2plV2h4YUFxamNjdjd3bjBiXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438095840](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438095840.jpg)
 
 可以看到由于 fs-extra 和 jsonfile 都依赖了 graceful-fs universalify ，所以分别在两个依赖包下分别安装了一遍，这就是链式的循环依赖。
 
@@ -86,7 +86,7 @@ node_modules采用循环链式依赖的方式进行安装，由此产生的问�
 
 下面是上一个项目，使用npm3+安装的 node_modules
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MjYxMGMwMTQxYzQwMTcwZWE2NjA1MjEyZWFmMTkzZDhfRG1hR2MwQnZYUFdVSHJTanVGNE45WUJ3Z2hKU0w3S1RfVG9rZW46Rjc2T2IzaDlub2h0cGN4S3NKUWN0RG9rbk9oXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438135369](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438135369.jpg)
 
 但因此产生的新问题，[幽灵依赖](https://v5hhs75fgk.feishu.cn/docs/doccnUcxx6uyk402oE3E3iMIcbd#2YephB)
 
@@ -98,7 +98,7 @@ node_modules采用循环链式依赖的方式进行安装，由此产生的问�
 
 在项目根目录执行 yarn 安装的 node_modules 如下
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=OTkwNTdjYzhkMTI4NmE1ZWU4MTYyZTYxMGJhN2FiYzlfRE1zMUN3d2NjNlZ0VlhVZjg0TjliS3p0dnBHU0VlS09fVG9rZW46SERJSGJYOGpYb2FmdDR4VlRnY2NPS1BObmplXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438153324](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438153324.jpg)
 
 3. #### pnpm
 
@@ -106,7 +106,7 @@ node_modules采用循环链式依赖的方式进行安装，由此产生的问�
 
 每个workspace下都有自己的node_modules，里面只能访问到在 package.json 里显示声明的 fs-extra，而fs-extra软链接到 全局node_modules下对应版本的 fs-extra，没有任何一个包会安装多次
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGRjODRlZGI5Y2M4N2NiYmU1ZjRmNzNjM2Y3MThmNDhfbXZuYjVoQ25oaW1MUUt4alpZeUdaTXdIb3g0bDhRT0pfVG9rZW46WXgwSGI5SlY1bzRuNkV4eHZ5dWN4VEdSblVjXzE3Mzc2MTIzMzM6MTczNzYxNTkzM19WNA)
+![1739438193663](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438193663.jpg)
 
 3. ### Phantom dependencies
 
@@ -166,21 +166,21 @@ packages:
 
 5. ### Monorepo常用指令
 
-```Plain
 安装依赖
 
+```bash
 pnpm add <package_name> --filter <workspace_name>
-
-
+```
 
 运行脚本
 
+```bash
 pnpm start --filter <workspace_name>
-
-
+```
 
 删除全局和每个workspace的node_modules
 
+```bash
 pnpm -r exec rm -rf node_modules
 ```
 

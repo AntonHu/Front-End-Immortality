@@ -28,11 +28,11 @@ adb devices
 
 3. #### 在chrome地址栏输入 chrome://inspect
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YWNhZThmZDQzZTMzNzkyNzhlNWZjMWMxNjBiNmZlZmFfYzdvekdPOE1iUXV3Q3pzblhITHhueEptM1RBZHdJb2JfVG9rZW46SnFQOGJWOTZub0hZMFR4OUJkY2NoaUpFbmdhXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437492121](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437492121.jpg)
 
 4. #### 打开要调试的页面，PC可和移动端同步操作
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZThjN2QwZjZjODkzOTBhNzY0MWYxMTk1ZDU1ZGE4NmVfTUxJZG9mcFVqdDRWOGJTRk9oVkJKNFBrbWFQZWRidzVfVG9rZW46UVA0WWJVUmZjb1p1Z1Z4MWhGOGNJbU5qbmNlXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437526001](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437526001.jpg)
 
 ### TBS-X5内核
 
@@ -48,7 +48,7 @@ X5内核浏览器的调试工具
 
 适用场景：鹅厂Android APP Webview，小程序（已不支持）
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=M2ZiMjAwOGI4OWIyZTQxYzJkOTI1OTQ5N2ZlYTUxODdfbWk4dHFUa3hZOGozN1AwbHNOS1dYTDhFbmhJUUFFa2VfVG9rZW46WUdaNGJ1N1Y0b3hpc2d4M1lVTWNGblc4bmtmXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437583740](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437583740.jpg)
 
 #### [X5内核管理](http://debugtbs.qq.com)
 
@@ -56,7 +56,7 @@ X5内核浏览器的调试工具
 
 X5内核管理工具，只可在X5内核的浏览器中打开
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YzU5MDhhOTFkNTE4NDQ3OTBiNjc0ZWJhYWU0MGY4NDZfTFVqeG1pYzlHM1I4cVRmenpnU1RuN2NOTnVUQllNeWRfVG9rZW46UHd0c2JvZXVPb0I3R3N4M0lSUmNOakpKbjVlXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437605776](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437605776.png)
 
 #### [X5内核调试工具](http://debugx5.qq.com/)
 
@@ -70,7 +70,7 @@ X5内核调试工具页面，只可在安装了X5内核
 
 勾选 X5JsCore，调试小程序（已不支持）
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MzVhYzIxYjRjY2EwZmIxOTI0ZWMwYWFkMjhkMmRjNTlfeVN5cWtqNjNIejgxck9XNjRJTUZnR0J2eENRSWRIZk5fVG9rZW46TVhRSmJadllQb1IxeTN4VzNwamNBZURTblljXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437622485](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437622485.jpg)
 
 #### [前端X5内核常见问题官方解答](https://x5.tencent.com/tbs/technical.html#/detail)
 
@@ -78,7 +78,7 @@ X5内核调试工具页面，只可在安装了X5内核
 
 小程序已经不支持调试的原因：
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=MTM1ODAxYzFkOTBmOGQ2N2I4ZDQ2M2JmYzdjMTUwZmNfMzZ1dEt4S0xZaE5sN3ZIa3pFOERaV1JickF2NHVpS0tfVG9rZW46VDZZcmJwS0Nwb0o5Zjl4NzRqSmNWU3pLblV4XzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437655155](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437655155.jpg)
 
 ## IOS
 
@@ -92,16 +92,16 @@ Safari版本和Mac版本直接关联，比较新的IOS不升级macOS就无法调
 
 1. #### IOS设置Safari
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NmU4NDNkZWQ4MWM2YTM3YjliYWYxM2IxM2MxMTMxNTBfbzRKWEpGZllKOXgyYVYydDRaWUxTdFpDMXNOeFFrcVBfVG9rZW46R1k0ZGJpVzIyb2ZqdG94S1pqM2NWSE1XbmxCXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437676596](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437676596.jpg)
 
 2. #### Mac设置Safari
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ODQ1MTRkMzg3MzhlMjcwNmQ1YmNlZTk0YmIyZWYxMjJfQ2tKSkV6Mm45TmNVSHljbUFFTVlPVXpCbzlndTdJR0lfVG9rZW46WEMySWJLaWpJb3hIZW94V0Y1aGNiTXVkblpiXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437695468](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437695468.jpg)
 
 3. #### IOS 使用Safari打开一个网页
 4. #### Mac使用Safari找到页面进行调试
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NzQxZGE4ZWZiZTk2Y2ZjZTMyMmVhNzc4MjFiYTBiZmRfRkJ6d05Ua09yYmhMZjYwRWozSlZJbHk4VFpSeThoRHJfVG9rZW46QXRYSWI0OHBMb1FzQkV4OWxKTmNEZFd6bjNnXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437719438](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437719438.jpg)
 
 ### ios-webkit-debug-proxy
 
@@ -135,7 +135,7 @@ ios_webkit_debug_proxy -f chrome-devtools://devtools/bundled/inspector.html
 
 默认9221端口，可看到已连接的设备
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YTBkMjI1NTIwOTUxOTg2MDk0YWJkNjVmOGE1NWYyODNfY2hqaXdvcU9wbERadVJoWTFNUUxDNGNtZmZHUm1NY3BfVG9rZW46T2lOWGJWTDRzb0dnb2V4emg5dWN2TW40bm9iXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437746330](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437746330.jpg)
 
 第一个设备9222端口，可看见已打开的页面，到此确定ios-webkit-debug-proxy安装成功
 
@@ -145,15 +145,10 @@ ios_webkit_debug_proxy -f chrome-devtools://devtools/bundled/inspector.html
 
 ```Plain
 // MacOS
-
 npm install remotedebug-ios-webkit-adapter -g
 
-
-
 // Windows
-
 scoop bucket add extras
-
 scoop install ios-webkit-debug-proxy
 ```
 
@@ -163,13 +158,13 @@ scoop install ios-webkit-debug-proxy
 remotedebug_ios_webkit_adapter --port=9000
 ```
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDM5NTg5YzM4M2IxNGEwYWNhNzhiOThmOTcyOGY0MGVfWFhodldBdlJHMnhtUGlsRGNHRWp4UXQwV1B3TVF3TkpfVG9rZW46RUt6NmJyYjYxbzExZGJ4MGI2aGNnZHg4bkNmXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437762260](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437762260.jpg)
 
 6. #### 配置Chrome Devtools - network target
 
 新增9000端口
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YTA1MmI4ZDAwYTQ1OTRjNTAxYzMwYTljNWI1MmJlNThfajFpWXhPVFZuV3didGpwNTBFbkJObnlDUnZ2NHdka2hfVG9rZW46RUJYZGJUVnhsb1lURTZ4NllqbmNSSXdibnNmXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437779766](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437779766.jpg)
 
 7. #### 开始调试页面
 
@@ -184,9 +179,11 @@ remotedebug_ios_webkit_adapter --port=9000
 
 ```Plain
 xcrun instruments -s
+```
 
-or 
+or
 
+```bash
 xcrun simctl list
 ```
 
@@ -194,15 +191,17 @@ xcrun simctl list
 
 ```Plain
 xcrun simctl boot 模拟器名
+```
 
 or
 
+```bash
 xcrun instruments -w 模拟器名
 ```
 
 4. #### 使用模拟器Safari调试，同IOS真机
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGI3NjMzOTAzNDU0NDMzZDQwZWI5MzgyYTk4OWY1ZGFfQXRMSTdZZ2lqbThBY28weEpWVFpSUlZMWnVwbERBczNfVG9rZW46QXpPQ2I0UEphb1BIeWJ4bWR2MmNSQVVUbjVmXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437803829](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437803829.jpg)
 
 5. #### 如果有app安装包，也可以调试app
 
@@ -221,11 +220,11 @@ xcrun instruments -w 模拟器名
 2. ##### 抓包，找到要代理的请求或文件
 3. ##### 右击目标请求，选中Map Local
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=YjNiYTI3MzVhMTAyY2UxMWJhMzYwMDVhN2RiODNmYjJfZGdKRDJQd1pNNmwyanNCdkVzRDBzdGNTRE00NUFjSVNfVG9rZW46RjB4cGJTZmdqb3RWNVR4QnhGSGN6SWNibmFlXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437819053](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437819053.jpg)
 
 4. ##### 选中要代理的本地文件
 
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ2ZjA3ODcxNGMxYTUxMjg3YTVkMWNjNDBkYjE5MmJfamVlNExhV29JUzcxbnFGTUVMdWFGazhXTHc5ejRuMmZfVG9rZW46SEZNOWJ6ZXhVb2xYYVZ4VFBqWGNUNHpxbnlkXzE3Mzc2MTI5MjU6MTczNzYxNjUyNV9WNA)
+![1739437832539](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437832539.jpg)
 
 ### [BrowserSync](http://www.browsersync.cn/)
 
