@@ -1,0 +1,13 @@
+# Changesets与Lerna
+
+## Lerna
+
+发布流程繁琐，包之间的依赖关系版本控制容易出错，多人开发版本冲突问题，版本号也难以控制。
+
+实际遇到的问题：版号冲突等发布失败问题，但是git提交成功，要再次发版只能再做commit再更新版号。只要有包发布失败，同时发布的包又得重新改版号。
+
+![1739440522989](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739440522989.jpg)
+
+## Changesets
+
+优点：自动分析修改的包，发包流程版本可控，多人开发不易冲突，自动生成changelog

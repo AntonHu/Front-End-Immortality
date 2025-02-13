@@ -113,7 +113,7 @@ V_PATH=~/docker/verdaccio; docker run -it --rm --name verdaccio \
   verdaccio/verdaccio
 ```
 
-打开 http://localhost:4873 就可以看到已经启动起来了
+可以看到已经启动起来了
 
 ![img](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/verdaccio-docker.4f5f3a9a.png)
 
