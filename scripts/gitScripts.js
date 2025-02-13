@@ -138,9 +138,9 @@ class GitCommander {
         try {
             // 执行 git commit 命令
             childProcess.execSync(`git commit -am "${commitType}${commitMessage}"`);
-            console.log(
+            console.log(chalk.green(
                 `已执行 git commit -am 指令: ${commitType}${commitMessage}`
-            );
+            ));
             return true
         } catch (error) {
             this.reset();
@@ -174,7 +174,7 @@ class GitCommander {
         try {
             // 执行 git push 命令
             const pushResult = childProcess.execSync(`git push ${remote}`);
-            console.log(`已执行 git push 指令：\n${pushResult.toString()}`);
+            console.log(chalk.green(`已执行 git push 指令：\n${pushResult.toString()}`));
             return true
         } catch (error) {
             this.reset();
