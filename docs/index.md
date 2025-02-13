@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习
-      link: /01.框架/React/组件生命周期
+      link: /00.Anton修仙传/修仙心法
     - theme: alt
       text: 玩会游戏
       link: https://antonhu.github.io/Mr.Faucet

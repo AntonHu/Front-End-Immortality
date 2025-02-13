@@ -1,54 +1,6 @@
-# Html出神入化
+# html之图片
 
-## html
-
-### 网页解析流程
-
-#### 建立连接阶段
-
-DNS解析出域名的真实IP -> 与服务器建立TCP连接 -> 向服务器发起HTTP请求 -> 服务器返回HTML文件
-
-#### HTML解析阶段
-
-启动渲染主线程，从上往下解析HTML并构建**DOM树**
-
-#### link异步下载解析
-
-遇到link标签css链接，继续解析HTML，并行下载css文件，并解析css文件构建**CSSOM树**（CSS Object Model描述如何在DOM上应用CSS）
-
-（如果link标签**rel=preload**，则**提前异步**下载css文件，下载完成后并不会直接解析CSS文件，需要手动把rel=stylesheet）
-
-```HTML
-<link href="demo.css" rel="preload" onload="this.rel='styleSheet'" />
-```
-
-#### script阻塞HTML
-
-遇到script标签脚本，暂停解析HTML，下载script文件并执行完成脚本，如果脚本访问了CSSOM，则会暂停等待CSSOM完成
-
-（如果script标签设置了**async**或**defer**属性，则会**异步并行**下载脚本文件，虽然下载不阻塞HTML解析，但是async下载完成后会立即执行，如果此时HTML解析未完成还是会暂停等待脚本执行完成，如果是defer，则会在HTML解析完成后再按顺序执行脚本）
-
-#### **Computed Style**
-
-HTML解析完成，DOM和CSSOM合并成**渲染树**Render Tree，包含节点结构和样式
-
-#### **Layout**
-
-计算渲染树各个节点的几何位置和大小生成**布局树**，再分析元素堆叠层级信息生成**层次树**
-
-#### **Paint**
-
-渲染主线程生成绘制指令，合成线程创建多个分块器线程进行图层分块处理，GPU进行光栅化处理确认像素点的渲染，最后执行绘制指令渲染页面。
-
-![](https://dfrtcthz8n.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDZjMWFhNTRmMTAwODRlNDFmOWQ3ODVkNDE3NGU4MjlfU0l3QmxkVDBMTUp3RzRJQ05EOE5zVU5WRjI5VjhHSHBfVG9rZW46WTd5SmI4Q0Nxb25hSnh4QVdWZGNkTGt3bjJmXzE3Mzc2MTMwNzU6MTczNzYxNjY3NV9WNA)
-
-[渲染流程精讲](https://zhuanlan.zhihu.com/p/586060532)
-
-重排：重新渲染主线程；重绘：只重新合成线程
-
-### 图片
-
-#### img**标签渲染流程**
+## img**标签渲染流程**
 
 1. **HTML 解析** ：浏览器解析 HTML，遇到 `<img>` 标签时发起图片资源请求。
 2. **资源加载** ：根据 `src` 属性加载图片资源（从缓存或服务器）。
@@ -57,9 +9,9 @@ HTML解析完成，DOM和CSSOM合并成**渲染树**Render Tree，包含节点�
 5. **绘制（Paint）** ：将解码后的位图绘制到屏幕上。
 6. **合成（Composite）** ：将图片与其他页面内容合成，最终显示。
 
-#### 优化手段
+## 优化手段
 
-###### **图片格式优化**
+### **图片格式优化**
 
 * 使用现代图片格式（如 WebP、AVIF）。
 * 根据场景选择格式（PNG 适合透明度，JPEG 适合色彩丰富图片，SVG 适合矢量图标）。
@@ -91,7 +43,7 @@ const toWebp = async (image) => {
 
 2. 资源持久化配置OSS，对图片资源自动生成webp的cdn缓存
 
-###### **图片尺寸优化**
+### **图片尺寸优化**
 
 使用 `srcset` 和 `sizes` 实现响应式图片。
 
@@ -107,7 +59,9 @@ const toWebp = async (image) => {
 
 压缩图片（如 TinyPNG、ImageOptim）。
 
-###### **懒加载（Lazy Loading）**
+### 图片加载优化
+
+#### **懒加载（Lazy Loading）**
 
 * 使用 `loading="lazy"` 属性：
 
@@ -133,7 +87,7 @@ const observer = new IntersectionObserver((entries) => {
 images.forEach(img => observer.observe(img));
 ```
 
-###### **预加载（Preload）**
+#### **预加载（Preload）**
 
 * 使用 `<link rel="preload">`：
 
@@ -141,7 +95,7 @@ images.forEach(img => observer.observe(img));
 <link rel="preload" href="critical-image.jpg" as="image">
 ```
 
-###### **渐进加载**
+#### **渐进加载**
 
 | 特性     | 渐进式 JPEG          | 基线 JPEG        |
 | -------- | -------------------- | ---------------- |
@@ -173,11 +127,11 @@ img.src = img.dataset.src;
 img.onload = () => img.classList.add('loaded');
 ```
 
-###### **CDN 加速**
+#### **CDN 加速**
 
 * 使用 CDN 分发图片资源，提升加载速度。
 
-###### **缓存优化**
+#### **缓存优化**
 
 * 使用 HTTP 缓存（`Cache-Control`、`ETag`）。
 * 使用 Service Worker 缓存图片资源。
@@ -212,12 +166,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-###### **减少图片数量**
-
-* 使用 CSS 替代小图标：更小的文件体积，更好的渲染性能，更灵活的响应式尺寸，css代码的维护性高。
-* 使用雪碧图（Sprite）合并多个小图标。
-
-###### **异步解码**
+#### **异步解码**
 
 * 使用 `decode()` 方法异步解码图片：
 
@@ -229,7 +178,7 @@ img.decode().then(() => {
 });
 ```
 
-###### **图片加载失败处理**
+#### **图片加载失败处理**
 
 1. **设置** `alt` **属性**
 
@@ -317,3 +266,8 @@ img.decode().then(() => {
 ```
 
 如果 `image.webp` 和 `image.jpg` 都加载失败，会显示 `fallback.jpg`。
+
+### **减少图片数量**
+
+* 使用 CSS 替代小图标：更小的文件体积，更好的渲染性能，更灵活的响应式尺寸，css代码的维护性高。
+* 使用雪碧图（Sprite）合并多个小图标。

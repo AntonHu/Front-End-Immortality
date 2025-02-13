@@ -16,7 +16,6 @@ interface Function {
     (param: number): string
     new (prop: boolean): Date
 }
-const 
 ```
 
 ### 类
