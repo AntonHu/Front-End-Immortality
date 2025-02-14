@@ -9,26 +9,26 @@ hero:
   actions:
     - theme: brand
       text: 开始学习
-      link: /00.Anton修仙传/修仙心法
+      link: /00.修仙前传/修仙前传
     - theme: alt
       text: 玩会游戏
       link: https://antonhu.github.io/Mr.Faucet
 
 features:
-  - title: 框架
+  - title: 阵法框架
     details: React Mobx Zustand Next vue
-  - title: 工程化
+  - title: 工程化神
     details: Webpack Vite Rollup esbuild gulp pnpm lerna Changesets
-  - title: 百变跨端
-    details: Taro ReactNative miniProgram HybridApp
+  - title: 百端争鸣
+    details: Taro ReactNative miniProgram HybridApp electron Flutter Tauri
   - title: 火眼金睛
     details: 性能优化 监控 埋点 测试 调试
   - title: 千锤百炼
-    details: JS html CSS 网络
-  - title: 算法
+    details: JS html CSS 天罗地网
+  - title: 算法大乘
     details: 特性 手写 算法
-  - title: 基建狂魔
+  - title: 筑基巅峰
     details: 脚手架 npm私有库 组件库 gitlab nginx docker
-  - title: 全栈
-    details: nodejs python AI
+  - title: 包罗万象
+    details: node AI python Rust 修仙心得
 ---
