@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习
-      link: /00.修仙前传/修仙前传
+      link: /00.修仙心得/修仙前传
     - theme: alt
       text: 玩会游戏
       link: https://antonhu.github.io/Mr.Faucet
