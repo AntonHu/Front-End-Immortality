@@ -86,7 +86,7 @@
 
 **5、在苹果上操作发布app**
 
-打开https://developer.apple.com/account/，输入帐号和密码，到达能信苹果帐号主页，点击App Store Connect -> Go to App Store Connect -> 选“我的App” -> 点击进入“一度店”：
+打开https://developer.apple.com/account/，输入帐号和密码，到达能信苹果帐号主页，点击App Store Connect -> Go to App Store Connect -> 选“我的App” -> 点击进入目标App：
 
 [![16](https://github.com/AntonHu/cordova-app/raw/main/markdown_img/md_16.jpg)](https://github.com/AntonHu/cordova-app/blob/main/markdown_img/md_16.jpg)
 

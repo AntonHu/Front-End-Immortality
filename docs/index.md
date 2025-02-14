@@ -16,19 +16,19 @@ hero:
 
 features:
   - title: 框架
-    details: React生态 mobx zustand Next vue
+    details: React Mobx Zustand Next vue
   - title: 工程化
-    details: webpack vite rollup gulp pnpm lerna changesets
-  - title: 监控调优
-    details: 调试 sentry 性能优化
-  - title: 跨端
-    details: Taro ReactNative 小程序 hybrid webview
-  - title: 基础千锤百炼
-    details: JS 样式与渲染 网络
+    details: Webpack Vite Rollup esbuild gulp pnpm lerna Changesets
+  - title: 百变跨端
+    details: Taro ReactNative miniProgram HybridApp
+  - title: 火眼金睛
+    details: 性能优化 监控 埋点 测试 调试
+  - title: 千锤百炼
+    details: JS html CSS 网络
   - title: 算法
     details: 特性 手写 算法
-  - title: 基建
-    details: 埋点 脚手架 npm私有库 组件库 gitlab/gitActions/jenkins nginx docker
+  - title: 基建狂魔
+    details: 脚手架 npm私有库 组件库 gitlab nginx docker
   - title: 全栈
-    details: nodejs 云服务 python
+    details: nodejs python AI
 ---

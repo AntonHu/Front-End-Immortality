@@ -11,7 +11,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Anton", link: "/" },
+      { text: "首页", link: "/" },
       { text: "AntonCook", link: "https://antonhu.github.io/Mr.Faucet" },
       { text: "Emoji Finder", link: "https://antonhu.github.io/emoji" },
     ],
@@ -23,7 +23,13 @@ export default defineConfig({
       label: "本文大纲",
     },
 
-    socialLinks: [{ icon: "github", link: "https://github.com/AntonHu" }],
+    socialLinks: [
+      { icon: "github", link: "https://github.com/AntonHu" },
+      {
+        icon: { svg: '<object data="https://cdn.simpleicons.org/bilibili" />' },
+        link: "https://space.bilibili.com/480116677",
+      },
+    ],
     logo: "/logo.png",
     search: {
       provider: "local",
