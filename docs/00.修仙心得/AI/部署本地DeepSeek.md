@@ -91,7 +91,7 @@ success
 
 通过命令行进行对话不太方便，所以还需要集成一个好用的WebUI来让对话可视化，例如[ChatBox](https://chatboxai.app/zh)，还有我即将介绍的Open-WebUI.
 
-[Open-WebUI](![](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214223225520.png))是一个AI托管平台，支持各种 LLM 运行器（如Ollama），并为AI大语言模型提供对话式的web界面。
+[Open-WebUI](https://openwebui.com/)是一个AI托管平台，支持各种 LLM 运行器（如Ollama），并为AI大语言模型提供对话式的web界面。
 
 ![image-20250214223445523](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214223445523.png)
 

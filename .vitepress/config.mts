@@ -49,4 +49,5 @@ export default defineConfig({
   srcDir: "docs",
   lastUpdated: true,
   base: "/Front-End-Immortality",
+  ignoreDeadLinks: "localhostLinks",
 });
