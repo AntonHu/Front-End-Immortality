@@ -30,7 +30,7 @@
 
 [访问官网](https://ollama.com/)下载安装包，一键安装即可。
 
-![image-20250214215353259](C:\Users\50413\AppData\Roaming\Typora\typora-user-images\image-20250214215353259.png)
+![1739553616600](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739553616600.jpg)
 
 ### linux
 
@@ -125,7 +125,7 @@ docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-
 
 打开http://localhost:3000已经可以看到webUI界面了
 
-![image-20250214224414843](C:\Users\50413\AppData\Roaming\Typora\typora-user-images\image-20250214224414843.png)
+![1739553644741](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739553644741.jpg)
 
 初次使用需要设置一个管理员账号
 
