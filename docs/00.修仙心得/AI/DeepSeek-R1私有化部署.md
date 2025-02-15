@@ -1,4 +1,4 @@
-# 部署本地DeepSeek
+# DeepSeek-R1私有化部署
 
 ## 本地部署的作用
 
@@ -53,6 +53,134 @@ ollama -v
 出现上述则表示安装成功，也可以浏览器访问 http://localhost:11434/ 验证
 
 ![image-20250214220036857](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214220036857.png)
+
+### 修改模型目录
+
+默认的模型安装目录可能并不如意，尤其是模型往往文件体积过大，例如在windows上默认安装在C盘会占据大量的内存，所以你可能会需要修改Ollama安装模型的目录，如不需要请跳过本步骤。
+
+通过设置环境变量 `OLLAMA_MODELS` 来指定Ollama安装模型的目录。以下是不同操作系统的具体步骤：
+
+#### Windows 系统
+
+1. **创建新的模型存储目录** ：打开资源管理器，创建一个新的目录作为模型存储路径。例如，创建 `D:\AIModels\Ollama`  。
+
+2. **修改环境变量** ：
+
+   - 右键点击 “此电脑” 或 “计算机” 图标，选择 “属性”。
+
+   - 在系统属性窗口中，点击 “高级系统设置”。
+
+   - 在 “系统属性” 窗口中，切换到 “高级” 选项卡，点击 “环境变量”。
+
+     ![image-20250215234150721](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250215234150721.png)
+
+   - 在 “环境变量” 窗口中，点击 “新建” 按钮。
+
+   - 输入变量名 `OLLAMA_MODELS`，变量值为新的模型路径，例如 `F:\AI\ollama\models`  。
+
+     ![image-20250215234300257](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250215234300257.png)
+
+3. **迁移现有模型（可选）** ：如果已经下载了一些模型，可以将它们从默认路径复制到新的路径：
+
+   ```bash
+   xcopy C:\Users\<用户名>\.ollama\models\* F:\AI\ollama\models /E /I
+   ```
+
+4. **验证更改** ：打开命令提示符，输入 `ollama list` 列出已下载的模型，检查是否使用新的模型路径  。
+
+#### Linux 系统
+
+1. **创建新的模型存储目录** ：打开终端，创建一个新的目录作为模型存储路径。例如，创建 `/data/Ollama/models` ：
+
+   ```bash
+   sudo mkdir -p /data/Ollama/models
+   ```
+
+2. **更改目录权限** ：确保 Ollama 有权限访问和写入新目录：
+
+   ```bash
+   sudo chown -R $(whoami):$(whoami) /data/Ollama/models
+   sudo chmod -R 775 /data/Ollama/models
+   ```
+
+3. **修改 Ollama 服务配置文件** ：
+
+   - 编辑 Ollama 服务的配置文件：
+
+     ```bash
+     sudo nano /etc/systemd/system/ollama.service
+     ```
+
+   - 在 `[Service]` 部分的 `Environment` 字段后，添加新的 `Environment` 字段，指定新的模型路径：
+
+     ```bash
+     Environment="OLLAMA_MODELS=/data/Ollama/models"
+     ```
+
+   - 完整的配置示例如下：
+
+     ```bash
+     [Unit]
+     Description=Ollama Service
+     After=network-online.target
+     
+     [Service]
+     ExecStart=/usr/local/bin/ollama serve
+     User=$(whoami)
+     Group=$(whoami)
+     Restart=always
+     RestartSec=3
+     Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+     Environment="OLLAMA_MODELS=/data/Ollama/models"
+     
+     [Install]
+     WantedBy=default.target
+     ```
+
+4. **重载配置并重启 Ollama 服务** ：
+
+   - 重载系统服务配置：
+
+     ```bash
+     sudo systemctl daemon-reload
+     ```
+
+   - 重启 Ollama 服务：
+
+     ```bash
+     sudo systemctl restart ollama
+     ```
+
+   - 查看服务状态：
+
+     ```bash
+     sudo systemctl status ollama
+     ```
+
+5. **验证更改** ：
+
+   - 检查默认路径 `/usr/share/ollama/.ollama/models`，确认模型文件是否已经消失。
+   - 检查新路径 `/data/Ollama/models`，确认是否生成了 `blobs` 和 `manifests` 文件夹  。
+
+#### MacOS 系统
+
+1. **创建新的模型存储目录** ：打开终端，创建一个新的目录作为模型存储路径。例如，创建 `/Users/yourusername/AIModels/Ollama` 。
+
+2. **设置环境变量** ：编辑 `~/.bash_profile` 或 `~/.zshrc` 文件，添加以下行来设置 `OLLAMA_MODELS` 环境变量：
+
+   ```bash
+   export OLLAMA_MODELS="/Users/yourusername/AIModels/Ollama"
+   ```
+
+3. **使环境变量生效** ：在终端中运行以下命令：
+
+   ```bash
+   source ~/.bash_profile
+   ```
+
+4. **验证更改** ：打开终端，输入 `ollama list` 列出已下载的模型，检查是否使用新的模型路径  。
+
+通过以上步骤，你就成功修改了 Ollama 安装模型的目录。
 
 ## 安装DeepSeek
 
