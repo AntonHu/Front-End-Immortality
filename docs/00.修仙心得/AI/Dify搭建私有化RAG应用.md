@@ -150,9 +150,7 @@
 
 ![image-20250215223216997](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250215223216997.png)
 
-然后稍微描述一下，让AI模型能知道如何使用上下文，例如：
-
-“你是一个生日管家，管理着用户有关的日期信息，擅长回答有关日期的问题，且熟练运用{{#content#}}工具”
+然后稍微描述一下，让AI模型能知道如何使用上下文
 
 ![image-20250215223503540](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250215223503540.png)
 
@@ -164,7 +162,7 @@
 
 ![image-20250215231337651](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250215231337651.png)
 
-而DeepSeek-R1由于生成的结果包含思考过程，也就是<think>标签内的内容，导致token过大出现了不完整的情况，这里建议更换其他模型来生成提示词
+而DeepSeek-R1由于生成的结果包含思考过程，也就是 `<think>` 标签内的内容，导致token过大出现了不完整的情况，这里建议更换其他模型来生成提示词
 
 ###### 修改系统模型
 

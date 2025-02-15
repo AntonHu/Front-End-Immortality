@@ -116,7 +116,7 @@ docker compose up -d
 
 #### 部署本地模型
 
-本地模型可以使用 **Ollama** 进行部署，部署指南可以参考[《部署本地DeepSeek》](./部署本地DeepSeek)
+本地模型可以使用 **Ollama** 进行部署，部署指南可以参考[《DeepSeek-R1私有化部署》](./DeepSeek-R1私有化部署)
 
 #### 使用本地模型
 
@@ -143,5 +143,5 @@ deepseek-r1:7b        0a8c26691023    4.7 GB    11 days ago
 
 ![image-20250215211909739](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250215211909739.png)
 
-到此Dify的本地搭建工作就完成了，建议你继续阅读[《Dify搭建私有化RAG》](./Dify搭建私有化RAG)，通过实操来学习如何创建一个AI工作流应用。
+到此Dify的本地搭建工作就完成了，建议你继续阅读[《Dify搭建私有化RAG应用》](./Dify搭建私有化RAG应用)，通过实操来学习如何创建一个AI工作流应用。
 
