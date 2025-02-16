@@ -11,7 +11,7 @@ hero:
       text: 开始学习
       link: /00.包罗万象/修仙前传
     - theme: alt
-      text: 玩会游戏
+      text: 洗一会菜
       link: https://antonhu.github.io/Mr.Faucet
 
 features:
