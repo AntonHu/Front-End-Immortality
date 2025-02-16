@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习
-      link: /00.修仙心得/修仙前传
+      link: /00.包罗万象/修仙前传
     - theme: alt
       text: 玩会游戏
       link: https://antonhu.github.io/Mr.Faucet
@@ -30,5 +30,5 @@ features:
   - title: 筑基巅峰
     details: 脚手架 npm私有库 组件库 gitlab nginx docker
   - title: 包罗万象
-    details: node AI python Rust 修仙心得
+    details: 修仙心得 AI Node Python Rust 
 ---

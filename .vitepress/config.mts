@@ -49,5 +49,5 @@ export default defineConfig({
   srcDir: "docs",
   lastUpdated: true,
   base: "/Front-End-Immortality",
-  ignoreDeadLinks: "localhostLinks",
+  ignoreDeadLinks: "localhostLinks", // 不处理localhost域名的死链接
 });
