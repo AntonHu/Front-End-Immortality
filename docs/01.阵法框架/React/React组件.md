@@ -4,6 +4,8 @@
 
 ## 类组件构造
 
+### 构造函数定义
+
 ```JavaScript
 /** react/src/ReactBaseClasses.js **/
 /** 
@@ -27,7 +29,9 @@ Component.prototype.forceUpdate = function (callback) {
 };
 ```
 
-```JavaScript
+### 组件渲染
+
+```js
 /** react-reconciler/src/ReactFiberClassComponent.js */
 /** @note 类组件渲染 FiberTag = 1 */
 function constructClassInstance(
