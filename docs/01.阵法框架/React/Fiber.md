@@ -1,5 +1,7 @@
 # Fiber
 
+> 本章节涉及的React源码均为版本19.0.0
+
 ## 什么是Fiber
 
 Fiber是React16之后设计的，一种表示**vDom节点运行时**的对象。
