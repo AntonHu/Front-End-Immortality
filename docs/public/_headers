@@ -1,24 +1,25 @@
 /*.js
-Content-Type: application/javascript; charset=utf-8
+  Content-Type: application/javascript; charset=utf-8
 
 /*.css
-Content-Type: text/css; charset=utf-8
+  Content-Type: text/css; charset=utf-8
 
 /*.json
-Content-Type: application/json; charset=utf-8
+  Content-Type: application/json; charset=utf-8
 
 /*.png
-Content-Type: image/png
+  Content-Type: image/png
 
 /*.jpeg
-Content-Type: image/jpeg
+  Content-Type: image/jpeg
 
 /*.jpg
-Content-Type: image/jpeg
+  Content-Type: image/jpeg
 
 /*.woff2
-Content-Type: font/woff2
+  Content-Type: font/woff2
 
 /*
-Content-Type: text/html; charset=utf-8
-! x-content-type-options
+  Content-Type: text/html; charset=utf-8
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
