@@ -1,6 +1,6 @@
 # webpack打包优化
 
-## 构建速度优化
+## 构建提速
 
 ### 持久化缓存
 
@@ -33,7 +33,7 @@ module.exports = {
 
 ### DllReferencePlugin三方库处理
 
-DllReferencePlugin：先将常用的大型三方库打包成dll，再通过webpack.DllReferencePlugin引用dll，节省重复打包
+`DllReferencePlugin`：先将常用的大型三方库打包成dll，再通过webpack.DllReferencePlugin引用dll，节省重复打包
 
 ### 多线程压缩
 
@@ -99,6 +99,64 @@ module.exports = {
 
 ## 打包体积优化
 
-Tree Shaking 消除未使用的代码
+### Tree Shaking 
 
-optimization.splitChunks 代码分割，也可以动态import()
+### splitChunks
+
+代码分割，也可以动态import()
+
+## 样式优化
+
+### 首屏样式提取
+
+`html-critical-webpack-plugin` 插件通过 **Puppeteer**（无头浏览器）来模拟页面渲染，并使用 **Critical CSS 提取算法** 识别出首屏样式，将这部分“关键CSS”关联进html的head中，并将非关键样式分离延后加载。
+
+```javascript
+const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    new HtmlCriticalWebpackPlugin({
+      base: 'dist', // 输出目录
+      src: 'index.html', // 目标 HTML 文件
+      dest: 'index.html', // 输出 HTML 文件
+      inline: true, // 内联关键 CSS
+      minify: true, // 压缩关键 CSS
+      width: 1300, // 视口宽度
+      height: 900, // 视口高度
+      penthouse: {
+        blockJSRequests: false, // 是否阻止 JavaScript 请求
+      },
+    }),
+  ],
+};
+```
+
+优点
+
+- **提升首屏加载速度**：通过内联关键 CSS，减少渲染阻塞时间。
+- **优化用户体验**：确保用户能够尽快看到页面的核心内容。
+- **自动化处理**：无需手动提取关键 CSS，插件会自动完成。
+
+缺点
+
+- **依赖 Puppeteer**：需要安装 Puppeteer，可能会增加构建时间。
+- **动态内容处理困难**：对于动态生成的内容（如通过 JavaScript 渲染的 DOM 元素），可能无法准确提取关键 CSS。
+- **配置复杂**：对于复杂的项目，可能需要调整配置以确保提取的 CSS 准确无误。
+
+### 清除冗余样式
+
+`purgecss-webpack-plugin` 插件会扫描项目中的 HTML、JavaScript 等文件，识别出实际使用到的 CSS 类名，然后与 CSS 处理工具（如 PostCSS）配合，移除未被引用的 CSS 。
+
+```js
+const HtmlCriticalWebpackPlugin = require('purgecss-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`, { nodir: true }), // 匹配 src 目录下的所有文件
+    }),
+  ],
+};
+```
+

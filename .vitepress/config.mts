@@ -48,6 +48,6 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: "docs",
   lastUpdated: true,
-  base: "/Front-End-Immortality",
+  base: process.env.DEPLOY_ROOT ? "./" : "/Front-End-Immortality",
   ignoreDeadLinks: "localhostLinks", // 不处理localhost域名的死链接
 });
