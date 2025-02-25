@@ -1,6 +1,3 @@
-/*
-Content-Type: text/html; charset=utf-8
-
 /*.js
 Content-Type: application/javascript; charset=utf-8
 
@@ -21,3 +18,7 @@ Content-Type: image/jpeg
 
 /*.woff2
 Content-Type: font/woff2
+
+/*
+Content-Type: text/html; charset=utf-8
+! x-content-type-options
