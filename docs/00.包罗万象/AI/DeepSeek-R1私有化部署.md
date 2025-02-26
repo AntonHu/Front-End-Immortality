@@ -50,7 +50,7 @@ ollama -v
 # 输出ollama version is 0.5.7
 ```
 
-出现上述则表示安装成功，也可以浏览器访问 http://localhost:11434/ 验证
+出现上述则表示安装成功，也可以浏览器访问 `http://localhost:11434/` 验证
 
 ![image-20250214220036857](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214220036857.png)
 

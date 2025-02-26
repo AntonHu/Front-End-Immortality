@@ -88,7 +88,7 @@ docker compose up -d
 
 ![image-20250214233806221](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214233806221.png)
 
-在Docker中启动Dify容器，打开浏览器访问 http://localhost:80/install
+在Docker中启动Dify容器，打开浏览器访问 `http://localhost:80/install`
 
 ![image-20250214234032549](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214234032549.png)
 
