@@ -1,5 +1,7 @@
 import { defineConfig } from "vitepress";
 import { getSidebars } from "./configs/sidebars.mts";
+import dotenv from "dotenv";
+dotenv.config();
 
 const sidebar = getSidebars();
 
@@ -45,9 +47,9 @@ export default defineConfig({
       copyright: "版权所有 © 2024-2030 AntonHu",
     },
   },
-  cleanUrls: false,
+  cleanUrls: true,
   srcDir: "docs",
   lastUpdated: true,
-  base: process.env.DEPLOY_ROOT ? "./" : "/Front-End-Immortality",
+  base: process.env.DEPLOY_ROOT ? "/" : "/Front-End-Immortality",
   ignoreDeadLinks: "localhostLinks", // 不处理localhost域名的死链接
 });
