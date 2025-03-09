@@ -6,7 +6,7 @@
 
 **Profiler**面板记录组件触发的每次commit和render时间，辅助发现不合理的commit排查优化的位置
 
-![1739436836493](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739436836493.jpg)
+![1739436836493](https://image.antoncook.xyz/picGo/1739436836493.jpg)
 
 **Components**面板可查看组件的状态数据，检查数据是否正确
 

@@ -4,7 +4,7 @@
 
 架构特点：重编译时，babel编译与AST修改使得不利于sourcemap工程化和插件，编译后代码与React无关
 
-![img](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/asynccode)
+![img](https://image.antoncook.xyz/picGo/asynccode)
 
 ### 编译时
 

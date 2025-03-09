@@ -10,7 +10,7 @@
 
 客户端收到SYN+ACK+y数据包，再回复ACK确认号y+1，连接建立
 
-![1739455464714](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739455464714.jpg)
+![1739455464714](https://image.antoncook.xyz/picGo/1739455464714.jpg)
 
 ### 四次挥手（关闭连接）
 
@@ -22,7 +22,7 @@
 
 客户端收到服务端关闭信号，回复ACK确认号，关闭连接
 
-![1739455436587](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739455436587.jpg)
+![1739455436587](https://image.antoncook.xyz/picGo/1739455436587.jpg)
 
 ## HTTP
 

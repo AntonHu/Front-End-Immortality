@@ -6,7 +6,7 @@
 
 实际遇到的问题：版号冲突等发布失败问题，但是git提交成功，要再次发版只能再做commit再更新版号。只要有包发布失败，同时发布的包又得重新改版号。
 
-![1739440522989](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739440522989.jpg)
+![1739440522989](https://image.antoncook.xyz/picGo/1739440522989.jpg)
 
 ## Changesets
 

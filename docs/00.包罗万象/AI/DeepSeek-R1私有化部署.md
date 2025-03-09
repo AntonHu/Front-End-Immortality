@@ -10,19 +10,19 @@
 
 - **灵活定制**：可定制AI知识库，如书架，源码，个人信息等。通过定制化，模型能够给出更符合需求的回答和解决方案。
 
-![image-20250214211744101](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214211744101.png)
+![image-20250214211744101](https://image.antoncook.xyz/picGo/image-20250214211744101.png)
 
 ## 本地部署的缺陷
 
 由于完全体的DeepSeek对算力的需求极大，起码将近30W的费用才能搭建起能流畅使用的设备，对大部分人来说都不太现实，而且使用过程中的电费开销日积月累也是一笔不小的开销，所以基本只能使用 **蒸馏版的DeepSeek**
 
-![image-20250214211836550](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214211836550.png)
+![image-20250214211836550](https://image.antoncook.xyz/picGo/image-20250214211836550.png)
 
 从模型名字可以看出蒸馏模型的参数和原模型，例如 **DeepSeek-R1-Distill-Qwen-7B** 就是蒸馏自通义千问模型，参数数量只有7B，参数越多模型越聪明。
 
 博主的电脑设备只能流畅运行7B的模型做演示，你的设备能运行多大的模型，可以参考下图：
 
-![微信图片_20250214220613](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250214220613.png)
+![微信图片_20250214220613](https://image.antoncook.xyz/picGo/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250214220613.png)
 
 ## 安装Ollama
 
@@ -30,7 +30,7 @@
 
 [访问官网](https://ollama.com/)下载安装包，一键安装即可。
 
-![1739553616600](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739553616600.jpg)
+![1739553616600](https://image.antoncook.xyz/picGo/1739553616600.jpg)
 
 ### linux
 
@@ -52,7 +52,7 @@ ollama -v
 
 出现上述则表示安装成功，也可以浏览器访问 `http://localhost:11434/` 验证
 
-![image-20250214220036857](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214220036857.png)
+![image-20250214220036857](https://image.antoncook.xyz/picGo/image-20250214220036857.png)
 
 ### 修改模型目录
 
@@ -72,13 +72,13 @@ ollama -v
 
    - 在 “系统属性” 窗口中，切换到 “高级” 选项卡，点击 “环境变量”。
 
-     ![image-20250215234150721](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250215234150721.png)
+     ![image-20250215234150721](https://image.antoncook.xyz/picGo/image-20250215234150721.png)
 
    - 在 “环境变量” 窗口中，点击 “新建” 按钮。
 
    - 输入变量名 `OLLAMA_MODELS`，变量值为新的模型路径，例如 `F:\AI\ollama\models`  。
 
-     ![image-20250215234300257](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250215234300257.png)
+     ![image-20250215234300257](https://image.antoncook.xyz/picGo/image-20250215234300257.png)
 
 3. **迁移现有模型（可选）** ：如果已经下载了一些模型，可以将它们从默认路径复制到新的路径：
 
@@ -186,7 +186,7 @@ ollama -v
 
 访问[Ollama官网的DeepSeek模型页](https://ollama.com/library/deepseek-r1)，你能直接复制模型的运行指令。
 
-![image-20250214221453149](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214221453149.png)
+![image-20250214221453149](https://image.antoncook.xyz/picGo/image-20250214221453149.png)
 
 在终端使用Ollama运行模型时，如果模型未安装则会先进行自动安装。
 
@@ -209,11 +209,11 @@ success
 
 看到Send a message这句话，DeepSeek就已经安装好并可以使用了，你还可以在命令行输入 `ollama list` 查看已经安装的模型列表
 
-![image-20250214221905107](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214221905107.png)
+![image-20250214221905107](https://image.antoncook.xyz/picGo/image-20250214221905107.png)
 
 现在你已经可以直接在命令行进行对话：
 
-![image-20250214222149016](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214222149016.png)
+![image-20250214222149016](https://image.antoncook.xyz/picGo/image-20250214222149016.png)
 
 ## Open-WebUI
 
@@ -221,7 +221,7 @@ success
 
 [Open-WebUI](https://openwebui.com/)是一个AI托管平台，支持各种 LLM 运行器（如Ollama），并为AI大语言模型提供对话式的web界面。
 
-![image-20250214223445523](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214223445523.png)
+![image-20250214223445523](https://image.antoncook.xyz/picGo/image-20250214223445523.png)
 
 ### 使用Python pip安装
 
@@ -239,7 +239,7 @@ open-webui serve
 
 如果你还没有Dokcer，可以前往官网下载 [Docker Desktop](https://www.docker.com/) 一键安装Docker
 
-![image-20250214223810043](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214223810043.png)
+![image-20250214223810043](https://image.antoncook.xyz/picGo/image-20250214223810043.png)
 
 安装好Docker后，通过命令行将open-webui安装到Docker
 
@@ -249,20 +249,20 @@ docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-
 
 安装完成后，即可在容器中启用：
 
-![image-20250214224046156](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214224046156.png)
+![image-20250214224046156](https://image.antoncook.xyz/picGo/image-20250214224046156.png)
 
 打开http://localhost:3000已经可以看到webUI界面了
 
-![1739553644741](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739553644741.jpg)
+![1739553644741](https://image.antoncook.xyz/picGo/1739553644741.jpg)
 
 初次使用需要设置一个管理员账号
 
-![image-20250214224456767](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214224456767.png)
+![image-20250214224456767](https://image.antoncook.xyz/picGo/image-20250214224456767.png)
 
 登录进去之后，open-webui自动绑定了ollama的端口，已经可以直接开始使用你安装的DeepSeek
 
-![image-20250214224659269](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214224659269.png)
+![image-20250214224659269](https://image.antoncook.xyz/picGo/image-20250214224659269.png)
 
-![image-20250214224728072](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250214224728072.png)
+![image-20250214224728072](https://image.antoncook.xyz/picGo/image-20250214224728072.png)
 
 至此，一个本地化的DeepSeek就完成了！

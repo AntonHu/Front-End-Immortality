@@ -16,7 +16,7 @@ www.baidu.com/detail
 
 点击右上角
 
-![image-20250213213934459](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/image-20250213213934459.png)
+![image-20250213213934459](https://image.antoncook.xyz/picGo/image-20250213213934459.png)
 
 无论是复制链接，分享给好友还是朋友圈，或者在浏览器中打开，url始终是www.baidu.com/main。
 

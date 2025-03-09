@@ -36,7 +36,7 @@ HTML解析完成，DOM和CSSOM合并成**渲染树**Render Tree，包含节点�
 
 渲染主线程生成绘制指令，合成线程创建多个分块器线程进行图层分块处理，GPU进行光栅化处理确认像素点的渲染，最后执行绘制指令渲染页面。
 
-![1739455895555](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739455895555.jpg)
+![1739455895555](https://image.antoncook.xyz/picGo/1739455895555.jpg)
 
 [渲染流程精讲](https://zhuanlan.zhihu.com/p/586060532)
 

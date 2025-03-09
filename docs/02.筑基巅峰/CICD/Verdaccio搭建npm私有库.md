@@ -12,7 +12,7 @@
 
 ## 私有库原理
 
-![img](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/private-npm.f27dab4e.jpg)
+![img](https://image.antoncook.xyz/picGo/private-npm.f27dab4e.jpg)
 
 用户 install 后向私有 npm 发起请求，服务器会先查询所请求的这个模块是否是我们自己的私有模块或已经缓存过的公共模块，如果是则直接返回给用户；如果请求的是一个还没有被缓存的公共模块，那么则会向上游源请求模块并进行缓存后返回给用户。上游的源可以是 npm 仓库，也可以是淘宝镜像。
 
@@ -56,7 +56,7 @@ Verdaccio 是一个 Node.js 创建的轻量的私有 npm proxy registry。
 - 与 yarn, npm 和 pnpm 100% 兼容
 - forked 于 sinopia@1.4.0 并且 100% 向后兼容。
 
-![img](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/verdaccio.1ea892c6.png)
+![img](https://image.antoncook.xyz/picGo/verdaccio.1ea892c6.png)
 
 ### docker 方式安装
 
@@ -115,7 +115,7 @@ V_PATH=~/docker/verdaccio; docker run -it --rm --name verdaccio \
 
 可以看到已经启动起来了
 
-![img](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/verdaccio-docker.4f5f3a9a.png)
+![img](https://image.antoncook.xyz/picGo/verdaccio-docker.4f5f3a9a.png)
 
 ### npm 方式安装
 

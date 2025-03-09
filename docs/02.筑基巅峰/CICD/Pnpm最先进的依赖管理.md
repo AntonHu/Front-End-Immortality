@@ -11,7 +11,7 @@ Pnpm 本质上就是一个包管理器，这一点跟 npm/yarn 没有区别，�
 * 节约磁盘空间
 * 提升安装速度
 
-![1739438006834](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438006834.jpg)
+![1739438006834](https://image.antoncook.xyz/picGo/1739438006834.jpg)
 
 另外他还能解决 npm/yarn 【幽灵依赖】的问题
 
@@ -19,7 +19,7 @@ Pnpm 本质上就是一个包管理器，这一点跟 npm/yarn 没有区别，�
 
 ---
 
-![1739438024402](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438024402.jpg)
+![1739438024402](https://image.antoncook.xyz/picGo/1739438024402.jpg)
 
 ## pnpm的特性
 
@@ -29,13 +29,13 @@ Pnpm 本质上就是一个包管理器，这一点跟 npm/yarn 没有区别，�
 
 安装的依赖包文件，会通过hard links硬链接的形式存储在pnpm创建的store目录下，默认情况下全局只会有一个store目录 .pnpm-store，所有的项目都共用这一目录下的硬链接
 
-![1739438042332](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438042332.jpg)
+![1739438042332](https://image.antoncook.xyz/picGo/1739438042332.jpg)
 
 ### node_modules
 
 创建非扁平化的 node_modules 文件夹
 
-![1739438053524](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438053524.jpg)
+![1739438053524](https://image.antoncook.xyz/picGo/1739438053524.jpg)
 
 npm/yarn 如今的安装的node_modules都是拍平的形式，而pnpm默认是不拍平的，这能解决【幽灵依赖】，如果想要继续使用拍平的方式，也支持配置.npmrc hoist = true
 
@@ -50,7 +50,7 @@ npm/yarn 如今的安装的node_modules都是拍平的形式，而pnpm默认是�
 1. ### 节约磁盘空间，提升安装速度
 2. #### 装过的包都通过 hard links 存储在磁盘的 .pnpm-store 文件夹内，所有项目共用，相同的包直接复用
 
-![1739438067699](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438067699.jpg)
+![1739438067699](https://image.antoncook.xyz/picGo/1739438067699.jpg)
 
 2. 不采用拍平的方式，绝不会下载重复的包
 3. 当更新一个包时，如果原版本有100个文件，新版本只新增了1个文件，pnpm不会重新下载101个文件，而只是下载新增的1个文件
@@ -68,11 +68,11 @@ node_modules采用循环链式依赖的方式进行安装，由此产生的问�
 
 配置该项目依赖两个包 fs-extra jsonfile
 
-![1739438085128](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438085128.jpg)
+![1739438085128](https://image.antoncook.xyz/picGo/1739438085128.jpg)
 
 执行 npm install 产生的 node_modules
 
-![1739438095840](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438095840.jpg)
+![1739438095840](https://image.antoncook.xyz/picGo/1739438095840.jpg)
 
 可以看到由于 fs-extra 和 jsonfile 都依赖了 graceful-fs universalify ，所以分别在两个依赖包下分别安装了一遍，这就是链式的循环依赖。
 
@@ -86,7 +86,7 @@ node_modules采用循环链式依赖的方式进行安装，由此产生的问�
 
 下面是上一个项目，使用npm3+安装的 node_modules
 
-![1739438135369](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438135369.jpg)
+![1739438135369](https://image.antoncook.xyz/picGo/1739438135369.jpg)
 
 但因此产生的新问题，[幽灵依赖](https://v5hhs75fgk.feishu.cn/docs/doccnUcxx6uyk402oE3E3iMIcbd#2YephB)
 
@@ -98,7 +98,7 @@ node_modules采用循环链式依赖的方式进行安装，由此产生的问�
 
 在项目根目录执行 yarn 安装的 node_modules 如下
 
-![1739438153324](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438153324.jpg)
+![1739438153324](https://image.antoncook.xyz/picGo/1739438153324.jpg)
 
 3. #### pnpm
 
@@ -106,7 +106,7 @@ node_modules采用循环链式依赖的方式进行安装，由此产生的问�
 
 每个workspace下都有自己的node_modules，里面只能访问到在 package.json 里显示声明的 fs-extra，而fs-extra软链接到 全局node_modules下对应版本的 fs-extra，没有任何一个包会安装多次
 
-![1739438193663](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739438193663.jpg)
+![1739438193663](https://image.antoncook.xyz/picGo/1739438193663.jpg)
 
 3. ### Phantom dependencies
 

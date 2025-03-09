@@ -28,11 +28,11 @@ adb devices
 
 3. #### 在chrome地址栏输入 chrome://inspect
 
-![1739437492121](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437492121.jpg)
+![1739437492121](https://image.antoncook.xyz/picGo/1739437492121.jpg)
 
 4. #### 打开要调试的页面，PC可和移动端同步操作
 
-![1739437526001](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437526001.jpg)
+![1739437526001](https://image.antoncook.xyz/picGo/1739437526001.jpg)
 
 ### TBS-X5内核
 
@@ -48,7 +48,7 @@ X5内核浏览器的调试工具
 
 适用场景：鹅厂Android APP Webview，小程序（已不支持）
 
-![1739437583740](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437583740.jpg)
+![1739437583740](https://image.antoncook.xyz/picGo/1739437583740.jpg)
 
 #### [X5内核管理](http://debugtbs.qq.com)
 
@@ -56,7 +56,7 @@ X5内核浏览器的调试工具
 
 X5内核管理工具，只可在X5内核的浏览器中打开
 
-![1739437605776](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437605776.png)
+![1739437605776](https://image.antoncook.xyz/picGo/1739437605776.png)
 
 #### [X5内核调试工具](http://debugx5.qq.com/)
 
@@ -70,7 +70,7 @@ X5内核调试工具页面，只可在安装了X5内核
 
 勾选 X5JsCore，调试小程序（已不支持）
 
-![1739437622485](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437622485.jpg)
+![1739437622485](https://image.antoncook.xyz/picGo/1739437622485.jpg)
 
 #### [前端X5内核常见问题官方解答](https://x5.tencent.com/tbs/technical.html#/detail)
 
@@ -78,7 +78,7 @@ X5内核调试工具页面，只可在安装了X5内核
 
 小程序已经不支持调试的原因：
 
-![1739437655155](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437655155.jpg)
+![1739437655155](https://image.antoncook.xyz/picGo/1739437655155.jpg)
 
 ## IOS
 
@@ -92,16 +92,16 @@ Safari版本和Mac版本直接关联，比较新的IOS不升级macOS就无法调
 
 1. #### IOS设置Safari
 
-![1739437676596](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437676596.jpg)
+![1739437676596](https://image.antoncook.xyz/picGo/1739437676596.jpg)
 
 2. #### Mac设置Safari
 
-![1739437695468](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437695468.jpg)
+![1739437695468](https://image.antoncook.xyz/picGo/1739437695468.jpg)
 
 3. #### IOS 使用Safari打开一个网页
 4. #### Mac使用Safari找到页面进行调试
 
-![1739437719438](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437719438.jpg)
+![1739437719438](https://image.antoncook.xyz/picGo/1739437719438.jpg)
 
 ### ios-webkit-debug-proxy
 
@@ -135,7 +135,7 @@ ios_webkit_debug_proxy -f chrome-devtools://devtools/bundled/inspector.html
 
 默认9221端口，可看到已连接的设备
 
-![1739437746330](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437746330.jpg)
+![1739437746330](https://image.antoncook.xyz/picGo/1739437746330.jpg)
 
 第一个设备9222端口，可看见已打开的页面，到此确定ios-webkit-debug-proxy安装成功
 
@@ -158,13 +158,13 @@ scoop install ios-webkit-debug-proxy
 remotedebug_ios_webkit_adapter --port=9000
 ```
 
-![1739437762260](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437762260.jpg)
+![1739437762260](https://image.antoncook.xyz/picGo/1739437762260.jpg)
 
 6. #### 配置Chrome Devtools - network target
 
 新增9000端口
 
-![1739437779766](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437779766.jpg)
+![1739437779766](https://image.antoncook.xyz/picGo/1739437779766.jpg)
 
 7. #### 开始调试页面
 
@@ -201,7 +201,7 @@ xcrun instruments -w 模拟器名
 
 4. #### 使用模拟器Safari调试，同IOS真机
 
-![1739437803829](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437803829.jpg)
+![1739437803829](https://image.antoncook.xyz/picGo/1739437803829.jpg)
 
 5. #### 如果有app安装包，也可以调试app
 
@@ -220,11 +220,11 @@ xcrun instruments -w 模拟器名
 2. ##### 抓包，找到要代理的请求或文件
 3. ##### 右击目标请求，选中Map Local
 
-![1739437819053](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437819053.jpg)
+![1739437819053](https://image.antoncook.xyz/picGo/1739437819053.jpg)
 
 4. ##### 选中要代理的本地文件
 
-![1739437832539](https://cdn.jsdelivr.net/gh/antonhu/picx-images-hosting/picGo/1739437832539.jpg)
+![1739437832539](https://image.antoncook.xyz/picGo/1739437832539.jpg)
 
 ### [BrowserSync](http://www.browsersync.cn/)
 
