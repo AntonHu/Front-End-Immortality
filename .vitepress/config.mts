@@ -14,7 +14,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },
-      { text: "AntonCook", link: "https://antonhu.github.io/Mr.Faucet" },
+      { text: "AntonCook", link: "https://mrfaucet.antoncook.xyz" },
       { text: "Emoji Finder", link: "https://antonhu.github.io/emoji" },
     ],
 
@@ -56,7 +56,7 @@ export default defineConfig({
     },
     footer: {
       message: "基于 MIT 许可发布",
-      copyright: "版权所有 © 2024-2030 AntonHu",
+      copyright: "版权所有 © 2024-2030 AntonCook",
     },
   },
   cleanUrls: true,

@@ -12,7 +12,7 @@ hero:
       link: /00.包罗万象/修仙前传
     - theme: alt
       text: 洗一会菜
-      link: https://antonhu.github.io/Mr.Faucet
+      link: https://mrfaucet.antoncook.xyz
 
 features:
   - title: 阵法框架
@@ -30,5 +30,5 @@ features:
   - title: 筑基巅峰
     details: 脚手架 npm私有库 组件库 gitlab nginx docker
   - title: 包罗万象
-    details: 修仙心得 AI Node Python Rust 
+    details: 修仙心得 AI Node Python Rust
 ---
