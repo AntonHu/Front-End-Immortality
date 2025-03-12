@@ -42,6 +42,8 @@
 
 ## 加载模型
 
+加载unsloth的deepseek蒸馏模型**unsloth/DeepSeek-R1-Distill-Llama-8B**
+
 ```python
 from unsloth import FastLanguageModel # 导入FastLanguageModel类，用来加载和使用模型
 import torch # 导入torch工具，用于处理模型的数学运算
@@ -107,11 +109,13 @@ print(response[0])
 # 打印生成的回答部分
 ```
 
-写好脚本运行，可以看到以下输出，和短视频带货风格差异巨大，反而像一档节目，十分不符合需求。
+写好脚本运行，可以看到以下输出，和短视频带货风格差异较大，反而像一档科普节目。
 
 ![image-20250312020914535](https://image.antoncook.xyz/picList/2025/03/b9f522a0ba30db7f682c97cd8eeb2342.webp)
 
 ## 加载数据集
+
+由于并没有短视频带货的现成数据集，我使用的数据集是自己整理的，手动整理效率也不高，以教学为主所以数据不多。
 
 ```python
 # 定义一个用于格式化提示的多行字符串模板
@@ -173,6 +177,8 @@ dataset["text"][0]
 
 ## 开始微调
 
+编写微调脚本，配置模型。
+
 ```python
 FastLanguageModel.for_training(model)
 
@@ -191,6 +197,14 @@ model = FastLanguageModel.get_peft_model(
 ```
 
 ![image-20250312001845836](https://image.antoncook.xyz/picList/2025/03/6c1e595b8def6742e9bf9d09ff760344.webp)
+
+设置微调参数，主要是3个**超参数**
+
+Number of Epochs 训练轮数：将完整的数据集学习多少遍，学太多容易思维定式
+
+Learning Rate 学习率：每次学习思路的改动程度，改动大思考多学习快，但也可以出现幻觉偏移
+
+Batch Size 批量大小：一次学习多少，一次学太多可能错失细节
 
 ```python
 from trl import SFTTrainer #导入 SFTTrainer，用于监督式微调
