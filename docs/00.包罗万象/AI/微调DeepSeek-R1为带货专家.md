@@ -143,8 +143,8 @@ EOS_TOKEN = tokenizer.eos_token #必须添加结束标记
 
 # 导入数据集加载函数数据集名称
 from datasets import load_dataset
-# 加载指定的数据集，选择中文语言和训练集的前500条记录
-dataset = load_dataset("AntonCook/dypromotion", 'default', split = "train[0:200]", trust_remote_code=True)
+# 加载指定的数据集，选择中文语言和训练集的前100条记录
+dataset = load_dataset("AntonCook/dypromotion", 'default', split = "train[0:100]", trust_remote_code=True)
 # 打印数据集的列名，查看数来中有哪些子段
 print(dataset.column_names)
 
@@ -207,9 +207,9 @@ Learning Rate 学习率：每次学习思路的改动程度，改动大思考多
 Batch Size 批量大小：一次学习多少，一次学太多可能错失细节
 
 ```python
-from trl import SFTTrainer #导入 SFTTrainer，用于监督式微调
-from transformers import TrainingArguments #导入 TrainingArguments,用于设置训练参数
-from unsloth import is_bfloat16_supported #导入函数，检查是否支持 bfloat16 数据格式
+from trl import SFTTrainer # SFTTrainer是一个轻量级transformer Trainer包装器，可在自定义数据集上微调语言模型或适配器
+from transformers import TrainingArguments # 导入 TrainingArguments, 用于设置训练参数
+from unsloth import is_bfloat16_supported # 导入函数，检查是否支持 bfloat16 数据格式
 
 trainer = SFTTrainer( #创建一个 SFTTrainer 实例
   model=model, # 传入要微调的模型
