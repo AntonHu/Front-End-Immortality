@@ -32,3 +32,5 @@ features:
   - title: 包罗万象
     details: 修仙心得 AI Node Python Rust
 ---
+
+<Home />
