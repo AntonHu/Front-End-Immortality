@@ -3,7 +3,7 @@
 
 ### flexible
 
-阿里的flexible实现原理其实就是viewport + rem
+手淘的flexible实现原理实际上就是viewport + rem
 
 1. 根据设备dpr动态修改viewport
 
