@@ -46,7 +46,7 @@ export default defineConfig({
         link: "https://zhihu.com/people/antoncook",
       },
     ],
-    logo: "/logo.png",
+    logo: "/head.png",
     search: {
       provider: "local",
     },
