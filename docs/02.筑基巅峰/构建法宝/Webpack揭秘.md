@@ -1,12 +1,6 @@
 # Webpack揭秘
 
-## 模块化
-
-### UMD
-
-## 原理
-
-### 打包流程
+## 打包流程
 
 1. 初始化，合并命令行参数，配置文件参数，得到最终的打包配置，创建compiler打包管理对象
 2. 解析入口，递归解析模块依赖关系，构建依赖图（make）
@@ -16,7 +10,7 @@
 6. bundle优化：（optimize）一系列优化输出产物的处理，tree shaking，terser压缩等
 7. 输出文件：（emit）将打包产物输出（assetEmmitted）到指定的路径（afterEmit）
 
-### 手写源码
+## 手写源码
 
 ```JavaScript
 const module_list = {
@@ -56,7 +50,7 @@ const module_list = {
 }(module_list))
 ```
 
-### 生命周期
+## 生命周期
 
 1. 初始化阶段：
    1. `entryOption`：在 Webpack 处理入口选项之前触发。
