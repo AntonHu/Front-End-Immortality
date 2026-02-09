@@ -24,9 +24,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # 构建工作
+  # 构建工作（需声明 environment 才能使用该 Environment 的变量，如 DEPLOY_PATH）
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
