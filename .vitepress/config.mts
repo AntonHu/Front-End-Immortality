@@ -1,15 +1,29 @@
 import { defineConfig } from "vitepress";
 import { getSidebars } from "./configs/sidebars.mts";
 import dotenv from "dotenv";
+
+// 先加载提交的 .env（非敏感、保证部署一致），再加载本地的 .env.local（敏感数据，不提交）
 dotenv.config();
+dotenv.config({ path: ".env.local", override: true });
 
 const sidebar = getSidebars();
+
+// 与 base 一致，本地 .env 设 DEPLOY_PATH 或 CI 设 env 则根路径部署
+const base = process.env.DEPLOY_PATH || '/';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Anton修仙传",
   description: "我的修仙生涯心法",
-  head: [["link", { rel: "icon", href: "/Front-End-Immortality/head.png" }]],
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        href: base === "/" ? "/head.png" : `${base}/head.png`,
+      },
+    ],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -46,7 +60,7 @@ export default defineConfig({
         link: "https://zhihu.com/people/antoncook",
       },
     ],
-    logo: "/head.png",
+    logo: base === "/" ? "/head.png" : `${base}/head.png`,
     search: {
       provider: "local",
     },
@@ -62,6 +76,6 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: "docs",
   lastUpdated: true,
-  base: process.env.DEPLOY_ROOT ? "/" : "/Front-End-Immortality",
+  base,
   ignoreDeadLinks: "localhostLinks", // 不处理localhost域名的死链接
 });

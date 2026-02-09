@@ -4,7 +4,7 @@
     <div class="list-container">
       <div class="list-item" v-for="post in recentPosts" :key="post.path">
         <div class="card">
-          <a class="title" :href="post.path">{{ post.title }}</a>
+          <a class="title" :href="withBase(post.path)">{{ post.title }}</a>
           <span class="date">{{ post.date }}</span>
         </div>
       </div>
@@ -14,6 +14,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import { withBase } from "vitepress";
 
 const recentPosts = ref([]);
 const HOME_PAGE_NAME = "修仙前传";
@@ -82,8 +83,6 @@ onMounted(async () => {
   border-radius: 12px;
   background-color: var(--vp-c-bg-soft);
   transition: border-color 0.25s, background-color 0.25s;
-}
-.title {
 }
 .date {
   margin-top: 5px;
