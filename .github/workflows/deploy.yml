@@ -46,7 +46,15 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: pnpm install # 或 npm ci / yarn install / bun install
+      # 排查 Environment 变量是否注入：看日志里 DEPLOY_PATH 是否有值（应为 /Front-End-Immortality）
+      - name: Debug DEPLOY_PATH
+        run: |
+          echo "DEPLOY_PATH (shell)=${DEPLOY_PATH:-<未设置>}"
+          echo "DEPLOY_PATH (length)=${#DEPLOY_PATH}"
       - name: Build with VitePress
+        env:
+          # 显式传入，避免子进程拿不到 Environment 变量
+          DEPLOY_PATH: ${{ env.DEPLOY_PATH }}
         run: pnpm docs:build # 或 npm run docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
