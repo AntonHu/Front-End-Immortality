@@ -1,5 +1,7 @@
 # 前端 AI Coding 落地指南（二）Rules篇
 
+> 本架构示例项目：[AI Coding Project](https://github.com/AntonHu/ai-coding-project)
+
 本篇是《前端 AI Coding 落地指南》的续作，专门讲 **Rules** 的实践：演进过程、设计原则、如何划分模块、何时写 Rules 何时写 Skills，以及项目级 Rules 的完整清单与每条 rule 的头部、介绍和通用化示例。首篇中已给出 Rules 的简要历程与清单，这里展开为可落地的细节。
 
 ---

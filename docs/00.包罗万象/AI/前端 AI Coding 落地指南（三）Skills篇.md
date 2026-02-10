@@ -1,5 +1,7 @@
 # 前端 AI Coding 落地指南（三）Skills篇
 
+> 本架构示例项目：[AI Coding Project](https://github.com/AntonHu/ai-coding-project)
+
 本篇是《前端 AI Coding 落地指南》的续作，专门讲 **Skills** 的实践：什么是 Skills、如何找开源 skills、何时封装、从 Rules 拆出来的与流程类技能、第三方与自封装清单、技能下 rules 的拆分演进，以及每个自封装 skill 的 SKILL 与 rules 示例片段。首篇中已给出 Skills 的简要历程与清单，这里展开为可落地的细节。
 
 ---
