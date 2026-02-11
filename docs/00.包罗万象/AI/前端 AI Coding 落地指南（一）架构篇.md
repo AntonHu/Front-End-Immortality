@@ -398,11 +398,11 @@ openspec/
 
 ```markdown
 ---
-name: huayiyi-skills-index
-description: 前端项目的技能索引，帮助 Agent 在具体开发场景下选择合适的技能文件。
+name: project-skills-index
+description: 项目的技能索引，帮助 Agent 在具体开发场景下选择合适的技能文件。
 ---
 
-# 画衣衣项目技能索引
+# 项目技能索引
 
 项目在 `.agents/skills` 下定义了一些与 RULE 配套的技能，用于承载**具体实践步骤与示例代码**，避免在 RULE 中塞入过多细节。
 
